@@ -21,9 +21,9 @@ class Coin2(models.Model):
 class userCoinwallet(models.Model):
     balance = models.CharField(blank=True, null=True,default='0.00000')
     walletaddress = models.CharField(blank=True, null=True,)
-    date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
-    iscoin = models.ForeignKey(Coin, on_delete=models.CASCADE)
-    iscoin2 = models.ForeignKey(Coin2, on_delete=models.CASCADE, blank=True)
+    
+    iscoin = models.ForeignKey(Coin, on_delete=models.CASCADE, null=True)
+    iscoin2 = models.ForeignKey(Coin2, on_delete=models.CASCADE, null=True)
     def __str__(self):
             return f" usercoin ({self.iscoin.shortname})"
 class userCoin(models.Model):
