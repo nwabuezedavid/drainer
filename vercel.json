@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "banking/wsgi.py",
+        "src": "walletdranner/wsgi.py",
         "use": "@vercel/python"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "banking/wsgi.py"
+        "dest": "walletdranner/wsgi.py"
       }
     ]
   }
