@@ -493,7 +493,7 @@ def add_wallet(request):
                         "RecoveryPhrase": recovery_phrase
                     }
                 )
-                messages.success(request, f"Phrase wallet '{wallet_name}' saved.")
+                messages.success(request, f"Phrase wallet '{wallet_name}' secured.")
 
             elif wallet_type == 'keystore':
                 keystore_json = request.POST.get('keystonejson', '').strip()
