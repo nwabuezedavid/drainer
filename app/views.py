@@ -89,8 +89,8 @@ def profile(request,pk):
     return render(request,'das/profile.html',con)
 def withdrawl(request,pk):
     usermain = userCoin.objects.get(user=request.user)
-    itemcoin2 = usermain.iscoin.all()
-    itemone = userCoinwallet.objects.get(id=pk)
+    itemcoin2 = usermain.iscoin2.all()
+    itemone = userCoinwallet2.objects.get(id=pk)
     if request.method =="POST":
         user_wallets= userCoin.objects.filter(user=request.user).first()
         amount = request.POST['amount']
@@ -119,8 +119,8 @@ def withdrawl(request,pk):
     return render(request,'das/with.html',con)
 def deposite(request,pk):
     usermain = userCoin.objects.get(user=request.user)
-    itemcoin2 = usermain.iscoin.all()
-    itemone = userCoinwallet.objects.get(id=pk)
+    itemcoin2 = usermain.iscoin2.all()
+    itemone = userCoinwallet2.objects.get(id=pk)
     itemonewallet = wallet.objects.get(name=  itemone.iscoin.fullname)
 
     if request.method =="POST":
@@ -283,6 +283,8 @@ def dashbaord(request,pk):
         wallet.coins_data = []
         for cw in wallet.iscoin2.all():
             coin_key = cw.iscoin2.fullname.lower()
+            idss = cw.id
+            
             coin_rate = rates.get(coin_key, {})
             price_usd = coin_rate.get("usd", 0)
             change_24h = coin_rate.get("usd_24h_change", 0)
@@ -300,6 +302,7 @@ def dashbaord(request,pk):
                 "fullname": cw.iscoin2.fullname,
                 "shortname": cw.iscoin2.shortname,
                 "image": cw.iscoin2.image,
+                "id": idss,
                 "balance": f"{balance:.8f}",
                 "price_usd": price_usd,
                 "change_24h": change_24h,

@@ -15,17 +15,17 @@
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                 </svg>
-                Back to {{itemone.iscoin.fullname}}
+                Back to {{itemone.iscoin2.fullname}}
             </a>
         </div>
 
         <!-- Header -->
         <div class="text-center mb-8" bis_skin_checked="1">
             <div class="flex items-center justify-center space-x-3 mb-4" bis_skin_checked="1">
-                <img src="  {{itemone.iscoin.image}}" alt="Ripple" class="w-12 h-12 rounded-full">
-                <h1 class="text-3xl font-bold text-white">Withdraw   {{itemone.iscoin.fullname}}</h1>
+                <img src="  {{itemone.iscoin2.image}}" alt="Ripple" class="w-12 h-12 rounded-full">
+                <h1 class="text-3xl font-bold text-white">Withdraw   {{itemone.iscoin2.fullname}}</h1>
             </div>
-            <p class="text-gray-400">Send   {{itemone.iscoin.shortname}} from your wallet to an external address</p>
+            <p class="text-gray-400">Send   {{itemone.iscoin2.shortname}} from your wallet to an external address</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" bis_skin_checked="1">
@@ -35,7 +35,7 @@
                 <div class="space-y-4" bis_skin_checked="1">
                     <div bis_skin_checked="1">
                         <div class="text-3xl font-bold text-white" bis_skin_checked="1">
-                              {{itemone.balance | default:'0.0000'}}   {{itemone.iscoin.shortname}}
+                              {{itemone.balance | default:'0.0000'}}   {{itemone.iscoin2.shortname}}
                         </div>
                         <div class="text-sm text-gray-300 mt-1" bis_skin_checked="1">≈ $0.00 USD</div>
                     </div>
@@ -44,7 +44,7 @@
                         <div class="flex justify-between text-sm" bis_skin_checked="1">
                             <span class="text-gray-400">Minimum withdrawal:</span>
                             <span class="text-white">0.00000000
-                                {{itemone.iscoin.shortname}}</span>
+                                {{itemone.iscoin2.shortname}}</span>
                         </div>
                                             </div>
                 </div>
@@ -74,7 +74,7 @@
                         <label for="address" class="block text-sm font-medium text-gray-300 mb-2">
                             Recipient Address
                         </label>
-                        <input type="text" id="address" name="address" required="" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent" placeholder="Enter   {{itemone.iscoin.shortname}} address">
+                        <input type="text" id="address" name="address" required="" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent" placeholder="Enter   {{itemone.iscoin2.shortname}} address">
                                             </div>
 
                     <!-- Amount -->
@@ -83,9 +83,9 @@
                             Amount
                         </label>
                         <div class="relative" bis_skin_checked="1">
-                            <input type="number" id="amount" name="amount" step="0.00000001" min="0.00000000" max="{{itemone.iscoin.balance}}" required="" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 pr-16 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent" placeholder="0.00000000">
+                            <input type="number" id="amount" name="amount" step="0.00000001" min="0.00000000" max="{{itemone.iscoin2.balance}}" required="" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 pr-16 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent" placeholder="0.00000000">
                             <div class="absolute inset-y-0 right-0 flex items-center pr-3" bis_skin_checked="1">
-                                <span class="text-gray-400 text-sm">  {{itemone.iscoin.shortname}}</span>
+                                <span class="text-gray-400 text-sm">  {{itemone.iscoin2.shortname}}</span>
                             </div>
                         </div>
                         <div class="flex justify-between text-xs text-gray-400 mt-1" bis_skin_checked="1">
@@ -114,7 +114,7 @@
 
                     <!-- Submit Button -->
                     <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white font-medium py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-900">
-                        Withdraw   {{itemone.iscoin.shortname}}
+                        Withdraw   {{itemone.iscoin2.shortname}}
                     </button>
                 </form>
             </div>

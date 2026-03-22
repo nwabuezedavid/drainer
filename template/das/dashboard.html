@@ -58,10 +58,12 @@
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" bis_skin_checked="1">
 
                             {% for wallet in itemcoin %}
+                             
+                         
     {% for coin in wallet.coins_data %}
-    {{coin}}
+    
     <div class="asset-card bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-secondary-500/50">
-        <a href="/assets/{{wallet.id}}/">
+        <a href="/assets/{{coin.id}}/">
             <div class="flex items-center justify-between mb-4">
                 <img src="{{ coin.image }}" alt="{{ coin.fullname }}" class="w-10 h-10 rounded-full">
                 <div class="text-right">
@@ -88,6 +90,7 @@
         </a>
     </div>
     {% endfor %}
+  
 {% endfor %}
                                      
                                     </div>
