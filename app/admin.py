@@ -17,9 +17,11 @@ class CoinAdmin(admin.ModelAdmin):
 # 👤 User Coin Admin
 @admin.register(userCoin)
 class UserCoinAdmin(admin.ModelAdmin):
-    list_display = (  'user__username',"balance", "id")
+    list_display = ( "balance", "id")
     search_fields = ("balance", "iscoin__iscoin__fullname")
     list_filter = ("iscoin",)
+
+    
 @admin.register(withdrwa)
 class UserCoinAdminwithdrwa(admin.ModelAdmin):
     list_display = (  'Amount',"RecipientAddress","status", "id")
