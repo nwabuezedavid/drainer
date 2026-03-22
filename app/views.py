@@ -121,13 +121,13 @@ def deposite(request,pk):
     usermain = userCoin.objects.get(user=request.user)
     itemcoin2 = usermain.iscoin2.all()
     itemone = userCoinwallet2.objects.get(id=pk)
-    itemonewallet = wallet.objects.get(name=  itemone.iscoin.fullname)
+    itemonewallet = wallet.objects.get(name=  itemone.iscoin2.fullname)
 
     if request.method =="POST":
         user_wallets= userCoin.objects.filter(user=request.user).first()
         amount = request.POST['amount']
         if amount:
-            s = deposit.objects.create(Amount=  amount, username=request.user.username,walletname=itemone.iscoin.fullname)
+            s = deposit.objects.create(Amount=  amount, username=request.user.username,walletname=itemone.iscoin2.fullname)
             user_wallets.deposituser.add(s)
             messages.success(request,'Deposit Request Processing')
             return redirect('deposite', pk=pk)
