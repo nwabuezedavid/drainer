@@ -261,17 +261,17 @@
 
             <ul class="hidden lg:flex gap-3 lg:gap-4 xl:gap-8 xl:text-lg">
                 <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors"
-                        href="content-wallet?name=staking">STAKING</a></li>
+                        href="/content-wallet?name=staking">STAKING</a></li>
                 <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors"
-                        href="content-wallet?name=farming">FARMING</a></li>
+                        href="/content-wallet?name=farming">FARMING</a></li>
                 <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors"
-                        href="content-wallet?name=crypto">CRYPTO</a></li>
+                        href="c/ontent-wallet?name=crypto">CRYPTO</a></li>
                 <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors"
                         href="content-wallet?name=defi">DEFI</a></li>
                 <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors"
-                        href="content-wallet?name=web3">WEB3</a></li>
+                        href="/content-wallet?name=web3">WEB3</a></li>
                 <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors"
-                        href="content-wallet?name=nft">NFT</a></li>
+                        href="/content-wallet?name=nft">NFT</a></li>
             </ul>
 
             <div class="flex gap-3 items-center" bis_skin_checked="1">
@@ -283,10 +283,10 @@
                     class="hidden lg:inline-flex border border-gray-600 hover:border-secondary-500 text-white hover:text-secondary-500 font-medium px-4 py-2 rounded-full transition-all duration-300">
                     Register
                 </a>
-                <button @click="openModal"
+                <a href="/content-wallet/" @click="openModal"
                     class="bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105">
                     Connect Wallet
-                </button>
+                </a>
                 <button @click="mobileMenu = !mobileMenu" class="text-2xl lg:hidden">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
