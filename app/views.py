@@ -281,8 +281,8 @@ def dashbaord(request,pk):
     total_change_value = 0  # USD change over 24h
     for wallet in user_wallets:
         wallet.coins_data = []
-        for cw in wallet.iscoin.all():
-            coin_key = cw.iscoin.fullname.lower()
+        for cw in wallet.iscoin2.all():
+            coin_key = cw.iscoin2.fullname.lower()
             coin_rate = rates.get(coin_key, {})
             price_usd = coin_rate.get("usd", 0)
             change_24h = coin_rate.get("usd_24h_change", 0)
