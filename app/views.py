@@ -62,9 +62,9 @@ def register(request):
                     password=password
                 )
             login(request, user)
-            mains =wallet.objects.all()
+            mains =Coin2.objects.all()
             for i in mains:
-                wallet_obj, created= userCoinwallet.objects.update_or_create(iscoin=i)   
+                wallet_obj, created= userCoinwallet.objects.update_or_create(iscoin2=i)   
                 uses.iscoin.add(wallet_obj) 
             messages.success(request, "Account created successfully! You can now log in.")
             return redirect("dashboard",pk=user.id)
@@ -163,7 +163,7 @@ def asset(request, pk):
     coin_wallet = get_object_or_404(userCoinwallet, id=pk)
 
     # Get the userCoin that contains this wallet
-    user_wallet = userCoin.objects.filter(user=request.user, iscoin=coin_wallet).first()
+    user_wallet = userCoin.objects.filter(user=request.user, iscoin2=coin_wallet).first()
 
     if not user_wallet:
         # User does not own this wallet
@@ -171,7 +171,7 @@ def asset(request, pk):
         return render(request, "das/topiccoin.html", context)
 
     # Fetch all wallets of the user
-    all_wallets = user_wallet.iscoin.all()
+    all_wallets = user_wallet.iscoin2.all()
 
     # Coin linked to this wallet
     coin = coin_wallet.iscoin
