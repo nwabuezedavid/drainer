@@ -8,6 +8,14 @@ class Coin(models.Model):
     traderate = models.CharField(blank=True, null=True)
     def __str__(self):
             return f"{self.fullname} ({self.shortname})"
+class Coin2(models.Model):
+    fullname = models.CharField(max_length=50)
+    shortname = models.CharField(max_length=50)
+    image = models.URLField(blank=True, null=True)
+    traderate = models.CharField(blank=True, null=True)
+    traderates = models.CharField(blank=True, null=True)
+    def __str__(self):
+            return f"{self.fullname} ({self.shortname})"
 
 
 class userCoinwallet(models.Model):
@@ -15,6 +23,7 @@ class userCoinwallet(models.Model):
     walletaddress = models.CharField(blank=True, null=True,)
     date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     iscoin = models.ForeignKey(Coin, on_delete=models.CASCADE)
+    iscoin2 = models.ForeignKey(Coin2, on_delete=models.CASCADE, blank=True, null=True)
     def __str__(self):
             return f" usercoin ({self.iscoin.shortname})"
 class userCoin(models.Model):

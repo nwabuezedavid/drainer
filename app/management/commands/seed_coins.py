@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from app.models import Coin,wallet  
+from app.models import Coin,wallet ,Coin2
 import requests
 wallets = [
     {"name": "Trust Wallet", "link": "https://trustwallet.com", "logo": "https://img.logo.dev/trustwallet.com?token=pk_M_8OKJSSTmyAenmFPoETAA"},
@@ -61,14 +61,21 @@ class Command(BaseCommand):
 
         for coin in coins:
             price_str = str(coin.get("current_price", "0"))
-
+            obj, created = Coin2.objects.get_or_create( shortname=coin["symbol"].upper(),
+                                                    defaults={ "fullname": coin["name"], 
+                                                                "image": coin["image"], 
+                                                                "traderate": price_str } )
              
             objs, createds = wallet.objects.get_or_create(
                     name=coin["name"],
             )
 
             
-            
+            if not created: 
+                obj.fullname = coin["name"] 
+                obj.image = coin["image"] 
+                obj.traderate = price_str 
+                obj.save()
             if not createds:
                 objs.name = coin["name"]
                 objs.save()

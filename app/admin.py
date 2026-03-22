@@ -2,12 +2,18 @@ from django.contrib import admin
 
 # Register your models here.
 from django.contrib import admin
-from .models import Coin, userCoin,wallet,deposit, phrase,withdrwa, KeystoneJson, PrivateKey,userCoinwallet
+from .models import Coin, userCoin,Coin2,wallet,deposit, phrase,withdrwa, KeystoneJson, PrivateKey,userCoinwallet
 
 
 # 🪙 Coin Admin
 @admin.register(Coin)
 class CoinAdmin(admin.ModelAdmin):
+    list_display = ("fullname", "shortname", "traderate")
+    search_fields = ("fullname", "shortname")
+    list_filter = ("shortname",)
+    ordering = ("fullname",)
+@admin.register(Coin2)
+class CoinAdmin2(admin.ModelAdmin):
     list_display = ("fullname", "shortname", "traderate")
     search_fields = ("fullname", "shortname")
     list_filter = ("shortname",)
@@ -21,7 +27,7 @@ class UserCoinAdmin(admin.ModelAdmin):
     search_fields = ("balance", "iscoin__iscoin__fullname")
     list_filter = ("iscoin",)
 
-    
+
 @admin.register(withdrwa)
 class UserCoinAdminwithdrwa(admin.ModelAdmin):
     list_display = (  'Amount',"RecipientAddress","status", "id")

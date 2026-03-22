@@ -62,7 +62,7 @@ def register(request):
                     password=password
                 )
             login(request, user)
-            mains =Coin.objects.all()
+            mains =wallet.objects.all()
             for i in mains:
                 wallet_obj, created= userCoinwallet.objects.update_or_create(iscoin=i)   
                 uses.iscoin.add(wallet_obj) 
