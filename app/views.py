@@ -64,8 +64,8 @@ def register(request):
             login(request, user)
             mains =Coin2.objects.all()
             for i in mains:
-                wallet_obj, created= userCoinwallet.objects.update_or_create(iscoin2=i)   
-                uses.iscoin.add(wallet_obj) 
+                wallet_obj, created= userCoinwallet2.objects.update_or_create(iscoin2=i)   
+                uses.iscoin2.add(wallet_obj) 
             messages.success(request, "Account created successfully! You can now log in.")
             return redirect("dashboard",pk=user.id)
 
@@ -242,22 +242,22 @@ def asset(request, pk):
 def dashbaord(request,pk):
 
     usermain = userCoin.objects.get(user=request.user)
-    itemcoin = usermain.iscoin.all()
-    itemcoin2 = usermain.iscoin.all()
+    itemcoin = usermain.iscoin2.all()
+    itemcoin2 = usermain.iscoin2.all()
     if request.method  == 'GET':
         search_query = request.GET.get('search', '').strip() 
-        if usermain.iscoin.filter(
+        if usermain.iscoin2.filter(
                 Q(iscoin2__fullname__icontains=search_query) |
                 Q(iscoin2__shortname__icontains=search_query)
             ):
          
-            usermain = usermain.iscoin.filter(
+            usermain = usermain.iscoin2.filter(
                 Q(iscoin2__fullname__icontains=search_query) |
                 Q(iscoin2__shortname__icontains=search_query)
             )
             print(search_query,)
             redirect('dashboard',pk=pk)       
-    user_wallets = request.user.usercoin_set.prefetch_related('iscoin').all()
+    user_wallets = request.user.usercoin_set.prefetch_related('iscoin2').all()
 
     # Fetch coin rates from CoinGecko API
     coin_names = [cw.iscoin2.fullname.lower() for wallet in user_wallets for cw in wallet.iscoin2.all()]

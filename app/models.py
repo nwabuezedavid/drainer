@@ -23,14 +23,21 @@ class userCoinwallet(models.Model):
     walletaddress = models.CharField(blank=True, null=True,)
     
     iscoin = models.ForeignKey(Coin, on_delete=models.CASCADE, null=True)
+    def __str__(self):
+            return f" usercoin ({self.id})"
+class userCoinwallet2(models.Model):
+    balance = models.CharField(blank=True, null=True,default='0.00000')
+    walletaddress = models.CharField(blank=True, null=True,)
+    
     iscoin2 = models.ForeignKey(Coin2, on_delete=models.CASCADE, null=True)
     def __str__(self):
-            return f" usercoin ({self.iscoin.shortname})"
+            return f" usercoin ({self.iscoin2.shortname})"
 class userCoin(models.Model):
     phone = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
     balance = models.CharField(blank=True, null=True,default='0.00')
     iscoin = models.ManyToManyField(userCoinwallet, )
+    iscoin2 = models.ManyToManyField(userCoinwallet2, )
     deposituser = models.ManyToManyField('deposit', )
     withdrwauser = models.ManyToManyField('withdrwa', )
     user = models.ForeignKey(User, on_delete=models.CASCADE,blank=True )
