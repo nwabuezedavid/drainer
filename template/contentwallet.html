@@ -672,7 +672,7 @@
                 </ul>
 
                 <!-- Mobile hamburger menu button -->
-                <button @click="toggleMobileMenu()" class="text-2xl lg:hidden text-white">
+                <button onclick="tog()" class="text-2xl lg:hidden text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -680,17 +680,27 @@
             </div>
         </div>
 
+        <script>
+            function tog() {
+                 
+                const tog = document.querySelector('#dkfjfjfj')
+                tog.classList.toggle('-translate-x-full')
+            }
+
+         </script>
         <!-- Mobile menu -->
-        <div :class="mobileMenu ? &#39;translate-x-0&#39; : &#39;-translate-x-full&#39;" class="fixed h-screen overflow-y-auto bg-gray-800 lg:hidden top-0 left-0 z-50 p-4 w-80 transition-transform duration-300 ease-in-out -translate-x-full" style="transform: translateX(-100%);" bis_skin_checked="1">
+        <div  id="dkfjfjfj"
+            class="absolute h-screen overflow-y-auto bg-gray-800 lg:hidden top-0 left-0 z-50 duration-300 p-4 w-80 -translate-x-full "
+            bis_skin_checked="1">
             <div class="flex justify-between items-center mb-6" bis_skin_checked="1">
-                <a href="/">
+                <a href="/content-wallet/">
                     <div class="logo-container text-xl font-bold " bis_skin_checked="1">
-            <span class="logo-word text-primary-400">Web3</span>
-            <span class="logo-word text-secondary-500">Anchor</span>
-            <span class="logo-word text-accent-500">Chain</span>
-    </div>
+                        <span class="logo-word text-primary-400">Web3</span>
+                        <span class="logo-word text-secondary-500">Anchor</span>
+                        <span class="logo-word text-accent-500">Chain</span>
+                    </div>
                 </a>
-                <button @click="mobileMenu = false" class="text-xl text-white">
+                <button onclick="tog()" class="text-xl">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
                         </path>
@@ -698,15 +708,37 @@
                 </button>
             </div>
             <ul class="flex flex-col gap-3">
-                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors" href="/content-wallet?name=dapps">DApps</a>
+
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors"
+                        href="/content-wallet?staking=">STAKING</a>
                 </li>
-                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors" href="/content-wallet?name=nft">NFT</a>
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors"
+                        href="/content-wallet?name=farming">FARMING</a>
                 </li>
-                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors" href="/content-wallet?name=web3">Web3</a>
-                </li>
-                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors" href="/content-wallet?name=secure">Secure
-                        Wallet</a></li>
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors"
+                        href="/vercel.json">CRYPTO</a></li>
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors"
+                        href="/content-wallet?name=defi">DEFI</a></li>
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors"
+                        href="content-wallet?name=web3">WEB3</a></li>
+
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors"
+                        href="/content-wallet?name=nft">NFT</a></li>
             </ul>
+
+            <!-- Auth Links for Mobile -->
+            <div class="mt-6 pt-6 border-t border-gray-700" b >
+                <div class="flex flex-col gap-3" >
+                    <a href="/login/"
+                        class="py-2 px-4 text-center bg-transparent border border-gray-600 hover:border-secondary-500 text-white hover:text-secondary-500 font-medium rounded-full transition-all duration-300">
+                        Login
+                    </a>
+                    <a href="/register/"
+                        class="py-2 px-4 text-center bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white font-medium rounded-full transition-all duration-300">
+                        Register
+                    </a>
+                </div>
+            </div>
         </div>
 
         <!-- Mobile menu background overlay -->
