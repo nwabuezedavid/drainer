@@ -1,0 +1,149 @@
+
+{% extends "./base.html" %}
+{% load static %}
+
+
+  {% block content %}
+
+<main class="min-h-screen p-4 sm:p-6">
+                <!-- Admin Impersonation Banner (Desktop) -->
+                
+                
+                
+                    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" bis_skin_checked="1">
+        <!-- Header -->
+        <div class="mb-8" bis_skin_checked="1">
+            <h1 class="text-3xl font-bold text-white mb-2">Profile Settings</h1>
+            <p class="text-gray-400">Manage your account information and preferences</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8" bis_skin_checked="1">
+            <!-- Profile Information -->
+            <div class="lg:col-span-2" bis_skin_checked="1">
+                <div class="profile-card rounded-xl p-6 mb-6" bis_skin_checked="1">
+                    <h2 class="text-xl font-semibold text-white mb-4">Profile Information</h2>
+
+                    <form action="/profilemain/" method="POST" class="space-y-4">
+                        {% csrf_token %}
+                        <div bis_skin_checked="1">
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">
+                                Full Name
+                            </label>
+                            <input type="text" id="name" name="name" value="{{request.user.username}}" required="" autocomplete="name" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent">
+                                                    </div>
+
+                        <!-- Email -->
+                        <div bis_skin_checked="1">
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
+                                Email Address
+                            </label>
+                            <input type="email" id="email" name="email" value="{{request.user.email}}" required="" autocomplete="email" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent">
+                                                    </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="bg-secondary-500 hover:bg-secondary-600 text-white font-medium py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                            Update Profile
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Change Password -->
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6" bis_skin_checked="1">
+                    <h2 class="text-xl font-semibold text-white mb-4">Change Password</h2>
+
+                    <form action="/password/" method="POST" class="space-y-4">
+                       {% csrf_token %}
+                        <div bis_skin_checked="1">
+                            <label for="current_password" class="block text-sm font-medium text-gray-300 mb-2">
+                                Current Password
+                            </label>
+                            <input type="password" id="current_password" name="current_password" required="" autocomplete="current-password" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent">
+                                                    </div>
+
+                        <!-- New Password -->
+                        <div bis_skin_checked="1">
+                            <label for="password" class="block text-sm font-medium text-gray-300 mb-2">
+                                New Password
+                            </label>
+                            <input type="password" id="password" name="password" required="" autocomplete="new-password" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent">
+                                                    </div>
+
+                        <!-- Confirm Password -->
+                        <div bis_skin_checked="1">
+                            <label for="password_confirmation" class="block text-sm font-medium text-gray-300 mb-2">
+                                Confirm New Password
+                            </label>
+                            <input type="password" id="password_confirmation" name="password_confirmation" required="" autocomplete="new-password" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent">
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="bg-accent-500 hover:bg-accent-600 text-white font-medium py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                            Update Password
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Account Summary -->
+            <div class="space-y-6" bis_skin_checked="1">
+                <!-- Account Info -->
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6" bis_skin_checked="1">
+                    <h3 class="text-lg font-semibold text-white mb-4">Account Summary</h3>
+                    <div class="space-y-3" bis_skin_checked="1">
+                        <div class="flex justify-between" bis_skin_checked="1">
+                            <span class="text-gray-400">Account Type</span>
+                            <span class="text-white capitalize">user</span>
+                        </div>
+                        <div class="flex justify-between" bis_skin_checked="1">
+                            <span class="text-gray-400">Member Since</span>
+                            <span class="text-white">Mar 2026</span>
+                        </div>
+                        <div class="flex justify-between" bis_skin_checked="1">
+                            <span class="text-gray-400">Email Status</span>
+                                                            <span class="text-secondary-400">Verified</span>
+                                                    </div>
+                    </div>
+                </div>
+
+                <!-- Display Preferences -->
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6" bis_skin_checked="1">
+                    <h3 class="text-lg font-semibold text-white mb-4">Display Preferences</h3>
+                    <form action="" method="POST">
+                        <input type="hidden" name="_token" value="OQW05Ok28SaI6DzC5KIGY9I6jvUQmDujWwAQtTxB" autocomplete="off">                        <input type="hidden" name="_method" value="PATCH">                        <div class="space-y-3" bis_skin_checked="1">
+                            <div class="flex items-center justify-between" bis_skin_checked="1">
+                                <div bis_skin_checked="1">
+                                    <div class="text-white text-sm" bis_skin_checked="1">Show non-zero balances first</div>
+                                    <div class="text-gray-400 text-xs" bis_skin_checked="1">Display assets with balances at the top</div>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" name="show_non_zero_balances_first" value="1" checked="" class="sr-only peer" onchange="this.form.submit()">
+                                    <div class="w-11 h-6 bg-gray-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary-500" bis_skin_checked="1">
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Account Actions -->
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6" bis_skin_checked="1">
+                    <h3 class="text-lg font-semibold text-white mb-4">Account Actions</h3>
+                    <div class="space-y-3" bis_skin_checked="1">
+                        <button onclick="confirmDeleteAccount()" class="w-full text-left text-red-400 hover:text-red-300 transition-colors py-2 px-3 rounded-lg hover:bg-red-500/10">
+                            <div class="flex items-center space-x-2" bis_skin_checked="1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                    </path>
+                                </svg>
+                                <span>Delete Account</span>
+                            </div>
+                            <div class="text-xs text-gray-500 mt-1 ml-6" bis_skin_checked="1">This action cannot be undone</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            </main>
+
+              {% endblock content %}

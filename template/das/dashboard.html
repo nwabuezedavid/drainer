@@ -1,0 +1,103 @@
+{% extends "./base.html" %}
+{% load static %}
+
+
+  {% block content %}
+   <main class="min-h-screen p-4 sm:p-6">
+                <!-- Admin Impersonation Banner (Desktop) -->
+                
+                
+                
+                    <div bis_skin_checked="1">
+        <!-- Welcome Section -->
+        <div class="mb-8" bis_skin_checked="1">
+            <h1 class="text-3xl font-bold text-white mb-2">
+                Welcome back, david nwabueze!
+            </h1>
+            <p class="text-gray-400">Manage your crypto assets and portfolio</p>
+        </div>
+
+        <!-- Portfolio Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8" bis_skin_checked="1">
+            <!-- Total Balance Card -->
+            <div class="balance-card rounded-xl p-6 text-center" bis_skin_checked="1">
+                <h3 class="text-lg font-medium text-gray-300 mb-2">Total Portfolio Value</h3>
+                <div class="text-3xl font-bold text-white mb-1" id="totalBalance" bis_skin_checked="1">${{userm.balance| default:'0.00'}}</div>
+                <div class="text-sm text-secondary-400" bis_skin_checked="1">Live market prices</div>
+            </div>
+
+            <!-- Portfolio Performance -->
+            <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center" bis_skin_checked="1">
+                <h3 class="text-lg font-medium text-gray-300 mb-2">24h Performance</h3>
+                <div class="text-3xl font-bold text-white mb-1" id="portfolioChange" bis_skin_checked="1">+{{portfolio_value}}%</div>
+                <div class="text-sm text-gray-400" bis_skin_checked="1">Portfolio change</div>
+            </div>
+
+            <!-- Active Positions -->
+            <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center" bis_skin_checked="1">
+                <h3 class="text-lg font-medium text-gray-300 mb-2">Active Positions</h3>
+                <div class="text-3xl font-bold text-white mb-1" id="activePositions" bis_skin_checked="1">{{active_positions}}</div>
+                <div class="text-sm text-gray-400" bis_skin_checked="1">Non-zero balances</div>
+            </div>
+        </div>
+
+
+
+        <!-- Assets Grid -->
+        <div class="mb-8" bis_skin_checked="1">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6" bis_skin_checked="1">
+                <h2 class="text-xl font-semibold text-white">Your Assets</h2>
+                                    <div class="flex-1 sm:flex-none sm:w-80" bis_skin_checked="1">
+                                        <form action="" method="get"   >
+                                                   
+                                            <input type="text" id="assetSearch" name="search" placeholder="Search your assets..." class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-transparent">
+                                        </form>
+                    </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" bis_skin_checked="1">
+
+                            {% for wallet in itemcoin %}
+    {% for coin in wallet.coins_data %}
+    <div class="asset-card bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-secondary-500/50">
+        <a href="#">
+            <div class="flex items-center justify-between mb-4">
+                <img src="{{ coin.image }}" alt="{{ coin.fullname }}" class="w-10 h-10 rounded-full">
+                <div class="text-right">
+                    <div class="btc_price text-sm text-gray-300">
+                        ${{ coin.price_usd|floatformat:2 }}
+                    </div>
+                    <div class="btc_price_change text-xs {% if coin.change_24h < 0 %}text-red-400{% else %}text-green-400{% endif %}">
+                        {{ coin.change_24h|floatformat:2 }}%
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="font-semibold text-white text-lg">{{ coin.fullname }}</h3>
+            <span class="btc_balance text-sm text-white font-medium">
+                {{ coin.balance }} {{ coin.shortname }}
+            </span>
+
+            <div class="flex justify-between items-center mt-2">
+                <span class="text-sm text-gray-400">Value</span>
+                <span class="btc_value text-sm text-secondary-400 font-medium">
+                    ${{ coin.value_usd|floatformat:2 }}
+                </span>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+{% endfor %}
+                                     
+                                    </div>
+                    </div>
+
+        <div class="py-6 flex justify-center items-center opacity-60 hover:opacity-100 transition-opacity" bis_skin_checked="1">
+    <a href="https://href.li/?https://www.coingecko.com/en/api" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs text-gray-400 hover:text-gray-300 transition-colors">
+        <span>Data provided by</span>
+        <img src="{% static './maindash_files/cg-logo.png'%}" alt="CoinGecko" class="h-5">
+    </a>
+</div>
+    </div>
+            </main>
+           {% endblock content %}

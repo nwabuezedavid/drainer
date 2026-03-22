@@ -1,0 +1,31 @@
+ <!-- SUCCESS MODAL -->
+           <!-- Django alerts -->
+{% if messages %}
+    <div class="mb-4">
+        {% for message in messages %}
+            <div class="flex items-center p-3 rounded-md mb-2
+                        {% if message.tags == 'error' %} bg-red-50 border border-red-200 text-red-700
+                        {% elif message.tags == 'success' %} bg-green-50 border border-green-200 text-green-700
+                        {% endif %}">
+                <svg class="w-5 h-5 mr-2
+                            {% if message.tags == 'error' %} text-red-400
+                            {% elif message.tags == 'success' %} text-green-400
+                            {% endif %}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {% if message.tags == 'error' %}
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    {% else %}
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M5 13l4 4L19 7"></path>
+                    {% endif %}
+                </svg>
+                <p class="text-sm">{{ message }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+
+
+                 
