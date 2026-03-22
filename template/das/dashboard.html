@@ -59,8 +59,9 @@
 
                             {% for wallet in itemcoin %}
     {% for coin in wallet.coins_data %}
+    {{coin}}
     <div class="asset-card bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-secondary-500/50">
-        <a href="#">
+        <a href="/assets/{{wallet.id}}/">
             <div class="flex items-center justify-between mb-4">
                 <img src="{{ coin.image }}" alt="{{ coin.fullname }}" class="w-10 h-10 rounded-full">
                 <div class="text-right">

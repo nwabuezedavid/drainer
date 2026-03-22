@@ -23,11 +23,11 @@
         <div class="asset-header rounded-xl p-6 mb-8" bis_skin_checked="1">
             <div class="flex items-center justify-between" bis_skin_checked="1">
                 <div class="flex items-center space-x-4" bis_skin_checked="1">
-                    <img src="{{itemone.iscoin.image}}" alt="Cardano" class="w-16 h-16 rounded-full">
+                    <img src="{{itemone.iscoin2.image}}" alt="Cardano" class="w-16 h-16 rounded-full">
                     <div bis_skin_checked="1">
-                        <h1 class="text-3xl font-bold text-white">{{itemone.iscoin.fullname}}</h1>
+                        <h1 class="text-3xl font-bold text-white">{{itemone.iscoin2.fullname}}</h1>
                         <div class="flex items-center space-x-3 mt-2" bis_skin_checked="1">
-                            <span class="text-lg text-gray-300">{{itemone.iscoin.shortname}}</span>
+                            <span class="text-lg text-gray-300">{{itemone.iscoin2.shortname}}</span>
                                                     </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
             <div class="bg-gray-800 border border-gray-700 rounded-xl p-6" bis_skin_checked="1">
                 <h3 class="text-lg font-medium text-gray-300 mb-2">Your Balance</h3>
                 <div class="text-2xl font-bold text-white" bis_skin_checked="1">
-                    {{itemone.balance|default:'0.00000'}} {{itemone.iscoin.shortname}}
+                    {{itemone.balance|default:'0.00000'}} {{itemone.iscoin2.shortname}}
                 </div>
                 <div class="ada_fiat_value text-sm text-secondary-400 mt-1" bis_skin_checked="1">$0.00</div>
             </div>
@@ -75,8 +75,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </div>
-                <h3 class="text-lg font-semibold text-white mb-2">Deposit {{itemone.iscoin.fullname}}</h3>
-                <p class="text-gray-400 text-sm">Add {{itemone.iscoin.fullname}} to your wallet</p>
+                <h3 class="text-lg font-semibold text-white mb-2">Deposit {{itemone.iscoin2.fullname}}</h3>
+                <p class="text-gray-400 text-sm">Add {{itemone.iscoin2.fullname}} to your wallet</p>
             </a>
 
             <!-- Withdraw -->
@@ -91,8 +91,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </div>
-                <h3 class="text-lg font-semibold text-white mb-2">Withdraw {{itemone.iscoin.fullname}}</h3>
-                <p class="text-gray-400 text-sm">Send {{itemone.iscoin.fullname}} to external wallet</p>
+                <h3 class="text-lg font-semibold text-white mb-2">Withdraw {{itemone.iscoin2.fullname}}</h3>
+                <p class="text-gray-400 text-sm">Send {{itemone.iscoin2.fullname}} to external wallet</p>
             </a>
 
             <!-- Swap -->
@@ -107,8 +107,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </div>
-                <h3 class="text-lg font-semibold text-white mb-2">Swap {{itemone.iscoin.fullname}}</h3>
-                <p class="text-gray-400 text-sm">Exchange {{itemone.iscoin.fullname}} for other assets</p>
+                <h3 class="text-lg font-semibold text-white mb-2">Swap {{itemone.iscoin2.fullname}}</h3>
+                <p class="text-gray-400 text-sm">Exchange {{itemone.iscoin2.fullname}} for other assets</p>
             </a>
         </div>
 
@@ -125,7 +125,7 @@
                 <div bis_skin_checked="1">
                     <h4 class="text-sm font-medium text-gray-300 mb-2">Minimum Withdrawal</h4>
                     <div class="text-lg text-white" bis_skin_checked="1">
-                        0.00000000 {{itemone.iscoin.fullname}}
+                        0.00000000 {{itemone.iscoin2.fullname}}
                     </div>
                 </div>
             </div>

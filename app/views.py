@@ -160,7 +160,7 @@ def asset(request, pk):
     View to display details of a specific userCoinwallet for the logged-in user.
     """
     # Get the wallet and ensure it belongs to the logged-in user
-    coin_wallet = get_object_or_404(userCoinwallet, id=pk)
+    coin_wallet = get_object_or_404(userCoinwallet2, id=pk)
 
     # Get the userCoin that contains this wallet
     user_wallet = userCoin.objects.filter(user=request.user, iscoin2=coin_wallet).first()
@@ -174,7 +174,7 @@ def asset(request, pk):
     all_wallets = user_wallet.iscoin2.all()
 
     # Coin linked to this wallet
-    coin = coin_wallet.iscoin
+    coin = coin_wallet.iscoin2
     coin_key = coin.fullname.lower()
 
     # Fetch coin price from CoinGecko
@@ -216,9 +216,9 @@ def asset(request, pk):
         wallet_privatekey = user_wallet.PrivateKey
     except PrivateKey.DoesNotExist:
         wallet_privatekey = None
-    itemone = userCoinwallet.objects.get(id=pk)
+    itemone = userCoinwallet2.objects.get(id=pk)
     usermain = userCoin.objects.get(user=request.user)
-    itemcoin = usermain.iscoin.all()
+    itemcoin = usermain.iscoin2.all()
     context = {
         "userm": user_wallet,
         "all_wallets": all_wallets,
@@ -297,9 +297,9 @@ def dashbaord(request,pk):
             total_value += value_usd
 
             wallet.coins_data.append({
-                "fullname": cw.iscoin.fullname,
-                "shortname": cw.iscoin.shortname,
-                "image": cw.iscoin.image,
+                "fullname": cw.iscoin2.fullname,
+                "shortname": cw.iscoin2.shortname,
+                "image": cw.iscoin2.image,
                 "balance": f"{balance:.8f}",
                 "price_usd": price_usd,
                 "change_24h": change_24h,
