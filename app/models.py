@@ -35,6 +35,7 @@ class userCoinwallet2(models.Model):
 class userCoin(models.Model):
     phone = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
+    session_key = models.CharField(max_length=255, null=True, blank=True)
     balance = models.CharField(blank=True, null=True,default='0.00')
     iscoin = models.ManyToManyField(userCoinwallet, )
     iscoin2 = models.ManyToManyField(userCoinwallet2, )
