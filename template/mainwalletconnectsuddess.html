@@ -1,0 +1,66 @@
+ <!-- SUCCESS MODAL -->
+           <!-- Django alerts -->
+{% if messages %}
+    <div class="mb-4">
+        {% for message in messages %}
+            <div x-show="showSuccessModal" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click="showSuccessModal = false" class="fixed inset-0 z-50 flex items-center justify-center p-4" style="background-color: rgba(0, 0, 0, 0.75); backdrop-filter: blur(8px);" bis_skin_checked="1">
+                    <div @click.stop="" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 max-w-md w-full text-center relative" bis_skin_checked="1">
+
+                        <!-- Close button -->
+                        <button @click="showSuccessModal = false" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Animated Success Icon -->
+                        <div class="mb-6" bis_skin_checked="1">
+                            <div class="w-24 h-24 mx-auto bg-green-100 rounded-full flex items-center justify-center animate-pulse" bis_skin_checked="1">
+                                <svg class="w-12 h-12 text-green-500 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Success Title -->
+                        <h2 class="text-2xl font-bold text-secondary-600 mb-4">Backup Successful</h2>
+
+                        <!-- UID Display with Copy Button -->
+                        <div class="mb-6" bis_skin_checked="1">
+                            <div class="flex items-center justify-center gap-2" bis_skin_checked="1">
+                                <strong class="text-gray-600 text-sm">UID: <span x-text="successData?.id || 'N/A'">{{message}}</span></strong>
+                                <button @click="copyUID()" class="ml-2 p-1 text-gray-500 hover:text-secondary-600 transition-colors duration-200" title="Copy UID">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!-- Copy feedback -->
+                            <div x-show="showCopyFeedback" x-transition="" class="text-green-600 text-xs mt-1" bis_skin_checked="1" style="display: none;">
+                                UID copied to clipboard!
+                            </div>
+                        </div>
+
+                        <!-- Success Message -->
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            Your wallet data has been successfully backed up! We've securely stored your information,
+                            ensuring your assets remain protected. Feel free to continue managing your wallet or explore
+                            additional features.
+                        </p>
+
+                        <!-- Return Button -->
+                        <button @click="showSuccessModal = false; window.location.href = '/'" class="bg-secondary-600 hover:bg-secondary-700 text-white font-semibold py-3 px-8 rounded-full transition-colors duration-200">
+                            Return To Home Page
+                        </button>
+                    </div>
+                </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+
+
+                 
