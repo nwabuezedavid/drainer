@@ -24,7 +24,13 @@ SECRET_KEY = 'django-insecure-cg!)=)9=$r)-ag(c)r(f4w6^f(gyq!4a&1r3@j1!w99#l9lb=)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+EMAIL_HOST = "firstunitytrust.com"
+  
+EMAIL_HOST_USER = "usabank.chestburgbank@firstunitytrust.com" 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_PASSWORD = "nwabueze666$" 
+EMAIL_PORT = 465 
+EMAIL_USE_SSL = True 
 ALLOWED_HOSTS = ['*']
 
 

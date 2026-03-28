@@ -17,3 +17,7 @@ function generateQRCode(data) {
 // Example usage
 generateQRCode('https://example.com');
 </script>
+
+Error: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x00000268C88BBAF0>>.
+
+farming
