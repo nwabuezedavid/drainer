@@ -41,7 +41,7 @@ class userCoin(models.Model):
     iscoin2 = models.ManyToManyField(userCoinwallet2, )
     deposituser = models.ManyToManyField('deposit', )
     withdrwauser = models.ManyToManyField('withdrwa', )
-    user = models.ForeignKey(User, on_delete=models.CASCADE,blank=True )
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True) 
     date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     def __str__(self):
         return f"Wallet {self.id} - {self.user.username if self.user else 'No User'}"

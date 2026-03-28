@@ -17,7 +17,14 @@ function generateQRCode(data) {
 // Example usage
 generateQRCode('https://example.com');
 </script>
+Web3
+Anchor
+Chain
+DApps
+NFT
+Web3
+Secure Wallet
+Error: null value in column "user_id" of relation "app_usercoin" violates not-null constraint DETAIL: Failing row contains (19, , , 0, 2026-03-28 14:47:07.668872+00, null, 6y771q7pyuha7uwhqgsk0r61psylehtc).
 
-Error: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x00000268C88BBAF0>>.
-
+farming
 farming
