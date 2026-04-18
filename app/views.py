@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import *
+from .models import * 
 import requests
 from django.shortcuts import render, redirect, get_object_or_404
 from django.shortcuts import redirect
@@ -311,10 +311,12 @@ def dashbaord(request,pk):
 
     portfolio_change_percent = (total_change_value / total_value * 100) if total_value else 0
     
-    
-    
+    usermainx = userCoin.objects.get(id=pk)
+     
+    print(usermainx.balance)
     con ={
         'userm':usermain,
+        'mainuserx':usermainx,
         'itemcoin':itemcoin,
         'itemcoin2':itemcoin2,
        "itemcoin": user_wallets,
