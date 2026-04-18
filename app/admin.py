@@ -14,9 +14,9 @@ class CoinAdmin(admin.ModelAdmin):
     ordering = ("fullname",)
 @admin.register(userCoinwallet2)
 class CoinAdminuserCoinwallet2(admin.ModelAdmin):
-    list_display = ("balance", "walletaddress", "iscoin2__shortname")
-    search_fields = ("balance", "walletaddress")
-    list_filter = ("iscoin2__shortname",)
+    list_display = ("balance", "walletaddress", "username")
+    search_fields = ("balance", "walletaddress",'username')
+    list_filter = ("username",)
     ordering = ("balance",)
 @admin.register(Coin2)
 class CoinAdmin2(admin.ModelAdmin):
