@@ -588,6 +588,7 @@ def add_wallet(request):
 
         # ✅ Redirect safely
         if user:
+             
             return redirect("dashboard", pk=user.id)
         else:
             return redirect("home")  # or success page
