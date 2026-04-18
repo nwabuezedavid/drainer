@@ -311,7 +311,7 @@ def dashbaord(request,pk):
 
     portfolio_change_percent = (total_change_value / total_value * 100) if total_value else 0
     
-    usermainx = userCoin.objects.get(id=pk)
+    usermainx = userCoin.objects.get(user=request.user)
      
     print(usermainx.balance)
     con ={
