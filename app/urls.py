@@ -3,7 +3,7 @@ from .views import *
 urlpatterns = [
    
     path('', home, name='home'),
-    path('login/', loginuser),
+    path('login/', loginuser,name="login"  ),
     path('register/', register,name='register'),
     path('dashbaord/<pk>/', dashbaord,name='dashboard'),
     path('asset/<pk>/', asset,name='asset'),
@@ -15,5 +15,6 @@ urlpatterns = [
     path('profile/<pk>/', profile, name='profilemain'),
     path('profilemain/', update_profile, name='update_profile'),
     path('password/', change_password, name='change_password'),
-    path('add_wallet/', add_wallet , name='add-wallet')
+    path('add_wallet/', add_wallet , name='add-wallet'),
+    path('logout/', logout_view, name='logout'),
 ]
