@@ -19,7 +19,7 @@ class CoinAdminuserCoinwallet2(admin.ModelAdmin):
     list_filter = ("username",)
     ordering = ("balance",)
     def coin_shortname(self, obj):
-        return obj.iscoin.shortname  # assuming ForeignKey
+        return obj.iscoin2.shortname  # assuming ForeignKey
 
     coin_shortname.short_description = "Coin"
 @admin.register(Coin2)
