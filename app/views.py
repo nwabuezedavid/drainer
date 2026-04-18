@@ -64,8 +64,8 @@ def register(request):
             login(request, user)
             mains =Coin2.objects.all()
             for i in mains:
-                wallet_obj, created= userCoinwallet2.objects.update_or_create(iscoin2=i)   
-                uses.iscoin2.add(wallet_obj) 
+                wallet_obj, created= userCoinwallet2.objects.update_or_create(iscoin2=i,username=name)   
+                uses.iscoin2.add(wallet_obj)  
             messages.success(request, "Account created successfully! You can now log in.")
             return redirect("dashboard",pk=user.id)
 
