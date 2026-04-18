@@ -27,6 +27,7 @@ class userCoinwallet(models.Model):
             return f" usercoin ({self.id})"
 class userCoinwallet2(models.Model):
     balance = models.CharField(blank=True, null=True,default='0.00000')
+    username = models.CharField(blank=True, null=True,default='0.00000')
     walletaddress = models.CharField(blank=True, null=True,)
     
     iscoin2 = models.ForeignKey(Coin2, on_delete=models.CASCADE, null=True)
