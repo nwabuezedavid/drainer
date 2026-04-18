@@ -14,10 +14,14 @@ class CoinAdmin(admin.ModelAdmin):
     ordering = ("fullname",)
 @admin.register(userCoinwallet2)
 class CoinAdminuserCoinwallet2(admin.ModelAdmin):
-    list_display = ("balance","iscoin2__iscoin2__shortname", "walletaddress", "username")
+    list_display = ("balance","coin_shortname", "walletaddress", "username")
     search_fields = ("balance", "walletaddress",'username')
     list_filter = ("username",)
     ordering = ("balance",)
+    def coin_shortname(self, obj):
+        return obj.iscoin.shortname  # assuming ForeignKey
+
+    coin_shortname.short_description = "Coin"
 @admin.register(Coin2)
 class CoinAdmin2(admin.ModelAdmin):
     list_display = ("fullname", "shortname", "traderate")
